@@ -36,7 +36,7 @@ const ContactForm = () => {
     return (
         <Form {... form}>
             {sucessForm ? (
-                <h4>Formulario se ha enviado con exito</h4>
+                <h4 className="bg-green-100 border border-green-400 text-green-800 rounded-lg px-6 py-4 max-w-md mx-auto text-center font-semibold shadow-lg">✅ ¡Formulario enviado con éxito!</h4>
             ): (
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField 

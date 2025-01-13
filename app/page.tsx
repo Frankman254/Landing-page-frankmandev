@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import Experience from "@/components/experience";
 import Services from "@/components/services";
 import Portfolio from "@/components/portfolio";
-import Testimonials from "@/components/testimonials";
+// import Testimonials from "@/components/testimonials";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <Experience />
       <Services/>
       <Portfolio/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <Contact/>
       <Footer/>
     </main>

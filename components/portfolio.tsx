@@ -14,8 +14,8 @@ const Portfolio = () => {
                         <h3 className="text-xl mb-4">{data.title}</h3>
                         <Image 
                         src={data.image} 
-                        alt="Image" 
-                        width={300} height={300} 
+                        alt={data.alt}
+                        width={600} height={600} 
                         className="rounded-2xl w-full"/>
                         <div className="mt-5 flex gap-5">
                             <Link 
