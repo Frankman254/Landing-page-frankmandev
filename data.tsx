@@ -152,8 +152,8 @@ export const dataPortfolio = [
         id: 2,
         title: "App Black Jack Vite",
         image: "/app-black-jack.png",
-        urlGithub: "#!",
-        urlDemo: "https://frankmandev-black-jack-app.netlify.app/",
+        urlGithub: "https://github.com/Frankman254/black-jack-app",
+        urlDemo: "https://frankmandev-blackjack.netlify.app/",
         alt: "App Black Jack Vite",
     },
     {
@@ -164,27 +164,6 @@ export const dataPortfolio = [
         urlDemo: "https://landing-page-frankmandev.netlify.app/#home",
         alt: "Landing Page Portfolio",
     },
-    // {
-    //     id: 4,
-    //     title: "Navegando Ideas Creativas",
-    //     image: "/image-4.jpg",
-    //     urlGithub: "#!",
-    //     urlDemo: "#!",
-    // },
-    // {
-    //     id: 5,
-    //     title: "Sitios Web Impactantes",
-    //     image: "/image-5.jpg",
-    //     urlGithub: "#!",
-    //     urlDemo: "#!",
-    // },
-    // {
-    //     id: 6,
-    //     title: "Proyectos Web Dinámicos",
-    //     image: "/image-6.jpg",
-    //     urlGithub: "#!",
-    //     urlDemo: "#!",
-    // },
 ];
 
 
