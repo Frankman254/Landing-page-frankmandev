@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 const Experience = () => {
     const { t } = useLanguage();
     return (
-        <div className="p-6 md:px-12 md:py-44 max-w-3xl mx-auto flex flex-col gap-6" id="experience">
+        <div className="p-6 md:px-12 md:py-14 max-w-3xl mx-auto flex flex-col gap-6" id="experience">
             <Title title={t.experience.title} subtitle={t.experience.subtitle}/>
             <div className="flex flex-col gap-6 mt-8">
                 {t.data.experience.map((experience, index) => (

@@ -7,12 +7,12 @@ import { useLanguage } from "./language-provider";
 const Services = () => {
     const { t } = useLanguage();
     return (
-        <div className="p-6 md:px-12 md:py-24 max-w-5xl mx-auto" id="services">
+        <div className="p-6 md:px-12 md:py-4 max-w-5xl mx-auto" id="services">
             <Title title={t.services.title} subtitle={t.services.subtitle}/>
             <div className="grid md:grid-cols-3 gap-5 mt-7">
                 {dataServices.map((service, serviceIndex) => (
                     <div key={service.id} 
-                    className="rounded-xl border-slate-400 border-2 p-6 dark:bg-slate-800 h-fit"
+                    className="rounded-xl border border-card-border p-6 bg-card-bg dark:bg-card-bg h-fit"
                     >
                         <h4 className="mb-4 text-xl flex gap-2">
                             {service.icon}
