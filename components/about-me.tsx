@@ -1,10 +1,7 @@
 "use client"
-import { dataAboutMe, dataSlider } from "@/data";
+import { dataAboutMe } from "@/data";
 import Title from "./shared/title";
-import { Button } from "./ui/button";
-import { Phone } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
-import Image from "next/image";
+
 import { useLanguage } from "./language-provider";
 
 const AboutMe = ()=>{
