@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/components/language-provider";
 import { LanguageScript } from "@/components/language-script";
 import Image from "next/image";
+import Script from "next/script";
 const urbanist = Urbanist({
   subsets: ["latin"]
 });
@@ -28,21 +29,32 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="es" suppressHydrationWarning>
-      <body
-        className={urbanist.className}
-      >
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+	return (
+		<html lang="es" suppressHydrationWarning>
+			<body className={urbanist.className}>
+				<Script
+					id="theme-script"
+					strategy="beforeInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+            (function() {
+              try {
+                var theme = localStorage.getItem('frankman-dev-theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (e) {}
+            })();
+          `,
+					}}
+				/>
+				<ThemeProvider>
         <LanguageProvider>
           <LanguageScript />
           {/* Banner full-width como fondo de página */}

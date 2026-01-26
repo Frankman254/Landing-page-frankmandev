@@ -15,10 +15,10 @@ const AboutMe = ()=>{
                     <p className="my-8">{t.aboutMe.description}</p>
                     <div className="grid md:grid-cols-3 mt-7 gap-4">
                         {dataAboutMe.map((data, index)=> (
-                            <div key={data.id} className="border border-white-10 rounded-xl p-4 shadow-md shadow-slate-100 dark:bg-slate-800">
+                            <div key={data.id} className="border border-card-border rounded-xl p-4 shadow-md bg-card-bg dark:bg-card-bg">
                                 {data.icon}
                                 <p className="my-2">{t.data.aboutMe[index].name}</p>
-                                <p className="text-gray-400">{t.data.aboutMe[index].description}</p>
+                                <p className="text-muted-foreground">{t.data.aboutMe[index].description}</p>
                             </div>
                         ))}
                     </div>

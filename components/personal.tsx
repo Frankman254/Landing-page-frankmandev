@@ -8,7 +8,7 @@ const Personal = () => {
     const { t } = useLanguage();
 
     return (
-        <div className="p-6 md:px-12 md:py-30 max-w-7xl mx-auto" id="personal">
+        <div className="p-6 md:px-12 md:py-10 max-w-7xl mx-auto" id="personal">
             <Title title={t.personal.title} subtitle={t.personal.subtitle} />
             <Carousel 
                 opts={{
@@ -33,7 +33,7 @@ const Personal = () => {
                                         priority={index === 0}
                                     />
                                 </div>
-                                <p className="text-center text-lg md:text-xl text-gray-700 dark:text-gray-300 px-4 font-medium max-w-3xl">
+                                <p className="text-center text-lg md:text-xl text-foreground px-4 font-medium max-w-3xl">
                                     {image.caption}
                                 </p>
                             </div>

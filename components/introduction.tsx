@@ -12,8 +12,8 @@ const Introduction= () => {
             <div className="text-center pt-8 md:pt-16 mt-[150px] md:mt-[-0px] lg:mt-[-100px]" id="home">
                 <h1 className="text-4xl font-bold mb-3 text-white">{t.introduction.name}</h1>
                 <h3 className="text-2xl text-white dark:text-white">{t.introduction.greeting}</h3>
-                <h2 className="text-1xl text-gray-400 dark:text-white">{t.introduction.role}</h2>
-                <p className="text-gray-400 dark:text-gray-400">{t.introduction.email}</p>
+                <h2 className="text-1xl text-muted-foreground">{t.introduction.role}</h2>
+                <p className="text-muted-foreground">{t.introduction.email}</p>
                 <div className="flex items-center">
                     <div className="flex flex-col md:flex-row gap-4 justify-between mt-10 mx-auto">
                         <Link className={buttonVariants()} href="#contact">

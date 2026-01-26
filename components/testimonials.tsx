@@ -14,7 +14,7 @@ const Testimonials = () => {
                 {dataTestimonials.map((testimonial) => (
                     <CarouselItem key={testimonial.id}
                     className="md:basis-1/3 p-4 text-center flex flex-col items-center 
-                    border-slate-400 border-2 rounded-lg">
+                    border border-card-border bg-card-bg dark:bg-card-bg rounded-lg">
                         <Avatar>
                             <AvatarImage src={testimonial.imageUrl} alt="Profile avatar"/>
                             <AvatarFallback>CN</AvatarFallback>

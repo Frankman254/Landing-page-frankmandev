@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="max-w-3xl mx-auto px-4">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 py-6">
                 {/* Logo */}
-                <div className="flex justify-center md:justify-start">
+                <div className="flex justify-center md:justify-start bg-black rounded-full p-2">
                     <Link href="#home" className="flex items-center hover:opacity-80 transition-opacity">
                         <Image 
                             src="/logo_frankman_dev.png" 

@@ -50,7 +50,6 @@ const ContactForm = () => {
                         <Input
                             placeholder={t.contactForm.namePlaceholder}
                             {... field}
-                            className="dark:bg-slate-800"
                         />
                         
                     </FormControl>
@@ -66,7 +65,6 @@ const ContactForm = () => {
                         <Input
                             placeholder={t.contactForm.emailPlaceholder}
                             {... field}
-                            className="dark:bg-slate-800"
                         />
                         
                     </FormControl>
@@ -82,7 +80,6 @@ const ContactForm = () => {
                         <Textarea
                             placeholder={t.contactForm.messagePlaceholder}
                             {... field}
-                            className="dark:bg-slate-800"
                         />
                         
                     </FormControl>
