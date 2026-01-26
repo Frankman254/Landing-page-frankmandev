@@ -1,41 +1,41 @@
-import { BellPlus, BookText, Briefcase, MessageSquareMore, Brush, Code2, CodeSquare, Home, Inbox, Heart, Mail, SquareDashedBottomCode, PanelsTopLeft,Rocket, Phone, UserRound, Wrench } from "lucide-react";
+import { BellPlus, BookText, Briefcase, MessageSquareMore, Brush, Code2, CodeSquare, Home, Inbox, Heart, Mail, SquareDashedBottomCode, PanelsTopLeft, Rocket, Phone, UserRound, Wrench, Server, Monitor, Database, Settings, GraduationCap } from "lucide-react";
 
 export const dataAboutMe = [
     {
         id: 1,
-        name: "Experiencia",
-        icon: <Briefcase />,
-        description: "+1 año de experiencia",
+        name: "Producción",
+        icon: <Server />,
+        description: "Experiencia trabajando con sistemas web reales en entornos institucionales de producción.",
     },
     {
         id: 2,
-        name: "Proyectos Personales",
-        icon: <Wrench />,
-        description: "+3 apps personales desarrolladas",
+        name: "Frontend",
+        icon: <Monitor />,
+        description: "React, Next.js y desarrollo de interfaces modernas enfocadas en experiencia de usuario.",
     },
     {
         id: 3,
-        name: "Metas",
-        icon: <Rocket />,
-        description: "Crear soluciones innovadoras y aprender IA",
+        name: "Backend & Datos",
+        icon: <Database />,
+        description: "Node.js, Express y SQL Server con trabajo directo sobre bases de datos.",
     },
     {
         id: 4,
-        name: "Habilidades",
-        icon: <SquareDashedBottomCode />,
-        description: "JavaScript, React, Python, Git, HTML/CSS",
+        name: "Infraestructura",
+        icon: <Settings />,
+        description: "Despliegues, gestión de logs y soporte en servidores Linux.",
     },
     {
         id: 5,
-        name: "Testimonios",
-        icon: <MessageSquareMore />,
-        description: "‘Francisco es proactivo y siempre busca soluciones’. - @Rolilink",
+        name: "Aprendizaje",
+        icon: <GraduationCap />,
+        description: "Mejora continua, estudio de nuevas tecnologías y buenas prácticas.",
     },
     {
         id: 6,
         name: "Valores",
         icon: <Heart />,
-        description: "Innovación, aprendizaje y colaboración",
+        description: "Compromiso, responsabilidad y enfoque en soluciones sostenibles.",
     },
 ];
 

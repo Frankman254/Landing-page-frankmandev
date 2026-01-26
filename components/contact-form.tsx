@@ -8,8 +8,10 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { useLanguage } from "./language-provider";
 
 const ContactForm = () => {
+    const { t } = useLanguage();
     const [sucessForm, setSucessForm] = useState(false)
     const formSchema = z.object({
         username: z.string().min(2).max(50),
@@ -36,7 +38,7 @@ const ContactForm = () => {
     return (
         <Form {... form}>
             {sucessForm ? (
-                <h4 className="bg-green-100 border border-green-400 text-green-800 rounded-lg px-6 py-4 max-w-md mx-auto text-center font-semibold shadow-lg">✅ ¡Formulario enviado con éxito!</h4>
+                <h4 className="bg-green-100 border border-green-400 text-green-800 rounded-lg px-6 py-4 max-w-md mx-auto text-center font-semibold shadow-lg">{t.contactForm.successMessage}</h4>
             ): (
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField 
@@ -46,7 +48,7 @@ const ContactForm = () => {
                 <FormItem>
                     <FormControl>
                         <Input
-                            placeholder="Your Name"
+                            placeholder={t.contactForm.namePlaceholder}
                             {... field}
                             className="dark:bg-slate-800"
                         />
@@ -62,7 +64,7 @@ const ContactForm = () => {
                 <FormItem>
                     <FormControl>
                         <Input
-                            placeholder="Your Email"
+                            placeholder={t.contactForm.emailPlaceholder}
                             {... field}
                             className="dark:bg-slate-800"
                         />
@@ -78,7 +80,7 @@ const ContactForm = () => {
                 <FormItem>
                     <FormControl>
                         <Textarea
-                            placeholder="Your Message"
+                            placeholder={t.contactForm.messagePlaceholder}
                             {... field}
                             className="dark:bg-slate-800"
                         />
@@ -87,7 +89,7 @@ const ContactForm = () => {
                 </FormItem>
             )}
             />
-            <Button type="submit">Enviar</Button>
+            <Button type="submit">{t.contactForm.submitButton}</Button>
             </form>    
             )}
 

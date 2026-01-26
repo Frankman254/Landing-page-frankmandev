@@ -1,13 +1,16 @@
+"use client"
 import { dataPortfolio } from "@/data";
 import Title from "./shared/title";
 import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
+import { useLanguage } from "./language-provider";
 
 const Portfolio = () => {
+    const { t } = useLanguage();
     return (
         <div className="p-4 max-w-4xl md:py-24 mx-auto" id="portfolio">
-            <Title title="Portfolio" subtitle="Trabajos recientes"/>
+            <Title title={t.portfolio.title} subtitle={t.portfolio.subtitle}/>
             <div className="grid md:grid-cols-3 gap-14 mt-4">
                 {dataPortfolio.map((data)=>(
                     <div key={data.id}>
@@ -21,13 +24,13 @@ const Portfolio = () => {
                             <Link 
                             className={buttonVariants({variant: "outline"})} 
                             href={data.urlGithub} target="_blank">
-                            Github
+                            {t.portfolio.github}
 
                             </Link>
                             <Link 
                             className={buttonVariants()} 
                             href={data.urlDemo} target="_blank">
-                            Live Demo
+                            {t.portfolio.liveDemo}
 
                             </Link>
                         </div>
