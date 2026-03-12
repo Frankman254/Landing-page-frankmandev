@@ -67,7 +67,7 @@ export const translations = {
 			services: 'Servicios',
 			portfolio: 'Portfolio',
 			contact: 'Contacto',
-			copyright: '© 2024 | Landing Page by FrankmanDev',
+			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez',
 		},
 		// Navbar
 		navbar: {
@@ -329,7 +329,7 @@ export const translations = {
 			services: 'Services',
 			portfolio: 'Portfolio',
 			contact: 'Contact',
-			copyright: '© 2024 | Landing Page by FrankmanDev',
+			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez',
 		},
 		// Navbar
 		navbar: {

@@ -13,13 +13,13 @@ const Portfolio = () => {
             <Title title={t.portfolio.title} subtitle={t.portfolio.subtitle}/>
             <div className="grid md:grid-cols-3 gap-14 mt-4">
                 {dataPortfolio.map((data)=>(
-                    <div key={data.id}>
-                        <h3 className="text-xl mb-4">{data.title}</h3>
+                    <div key={data.id} className="rounded-2xl border border-card-border bg-card-bg p-5 shadow-md">
+                        <h3 className="text-xl mb-4 font-semibold">{data.title}</h3>
                         <Image 
                         src={data.image} 
                         alt={data.alt}
                         width={600} height={600} 
-                        className="rounded-2xl w-full"/>
+                        className="rounded-2xl w-full border border-card-border"/>
                         <div className="mt-5 flex gap-5">
                             <Link 
                             className={buttonVariants({variant: "outline"})} 

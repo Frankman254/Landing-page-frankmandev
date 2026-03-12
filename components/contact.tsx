@@ -14,12 +14,14 @@ const Contact = () => {
                 <div>
                     {dataContact.map((data, index)=>(
                         <div key={data.id}
-                        className="flex flex-col items-center bg-card-bg dark:bg-card-bg border border-card-border rounded-lg mb-5 p-4"
+                        className="flex flex-col items-center bg-card-bg dark:bg-card-bg border border-card-border rounded-2xl mb-5 p-5 shadow-md"
                         >
-                            {data.icon}
-                            <p>{t.data.contact[index].title}</p>
-                            <p>{data.subtitle}</p>
-                            <Link href={data.link} target="_blank">
+                            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent text-brand-red">
+                                {data.icon}
+                            </div>
+                            <p className="mt-3 font-semibold">{t.data.contact[index].title}</p>
+                            <p className="text-muted-foreground">{data.subtitle}</p>
+                            <Link href={data.link} target="_blank" className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-red">
                             {t.contact.sendMessage}
                             
                             </Link>

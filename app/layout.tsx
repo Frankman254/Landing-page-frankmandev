@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import { Urbanist } from "next/font/google"
 import "./globals.css";
+import BrandBackdrop from "@/components/brand/brand-backdrop";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/components/language-provider";
 import { LanguageScript } from "@/components/language-script";
-import Image from "next/image";
 import Script from "next/script";
 const urbanist = Urbanist({
   subsets: ["latin"]
@@ -13,18 +13,30 @@ const urbanist = Urbanist({
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://landing-page-frankmandev.netlify.app"),
   title: "Frankman Dev",
-  description: "Landing Page by Frankman Dev",
+  description: "Frankman Dev | Systems Engineer and Web Developer",
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
-      { url: "/logo_frankmandev.png", sizes: "1536x1024", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/brand-mark.svg", sizes: "128x128", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.svg",
     apple: [
-      { url: "/logo_frankmandev.png", sizes: "1536x1024", type: "image/png" },
+      { url: "/apple-icon.svg", sizes: "180x180", type: "image/svg+xml" },
     ],
+  },
+  openGraph: {
+    title: "Frankman Dev",
+    description: "Systems Engineer and Web Developer",
+    images: ["/brand-banner.svg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frankman Dev",
+    description: "Systems Engineer and Web Developer",
+    images: ["/brand-banner.svg"],
   },
 };
 
@@ -57,18 +69,7 @@ export default function RootLayout({
 				<ThemeProvider>
         <LanguageProvider>
           <LanguageScript />
-          {/* Banner full-width como fondo de página */}
-          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
-            <Image 
-              src="/banner.png" 
-              alt="Banner Frankman Dev" 
-              fill
-              className="object-cover"
-              priority
-              sizes="100vw"
-            />
-          </div>
-          {/* Contenido principal que empieza después del banner */}
+          <BrandBackdrop />
           <div className="relative">
             {children}
           </div>

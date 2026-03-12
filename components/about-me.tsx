@@ -12,12 +12,14 @@ const AboutMe = ()=>{
             <div className="flex flex-col gap-6">
 
                 <div>
-                    <p className="my-8">{t.aboutMe.description}</p>
+                    <p className="my-8 text-lg leading-8 text-text-secondary">{t.aboutMe.description}</p>
                     <div className="grid md:grid-cols-3 mt-7 gap-4">
                         {dataAboutMe.map((data, index)=> (
-                            <div key={data.id} className="border border-card-border rounded-xl p-4 shadow-md bg-card-bg dark:bg-card-bg">
-                                {data.icon}
-                                <p className="my-2">{t.data.aboutMe[index].name}</p>
+                            <div key={data.id} className="border border-card-border rounded-2xl p-5 shadow-md bg-card-bg dark:bg-card-bg transition duration-200 hover:-translate-y-1">
+                                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent text-brand-red">
+                                    {data.icon}
+                                </div>
+                                <p className="my-3 text-lg font-semibold">{t.data.aboutMe[index].name}</p>
                                 <p className="text-muted-foreground">{t.data.aboutMe[index].description}</p>
                             </div>
                         ))}
