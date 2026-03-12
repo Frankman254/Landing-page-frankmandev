@@ -53,6 +53,12 @@ export default {
   			text: {
   				secondary: 'hsl(var(--text-secondary))',
   				muted: 'hsl(var(--text-muted))'
+			},
+			brand: {
+				yellow: 'hsl(var(--brand-yellow))',
+				red: 'hsl(var(--brand-red))',
+				ink: 'hsl(var(--brand-ink))',
+				cream: 'hsl(var(--brand-cream))'
   			},
   			chart: {
   				'1': 'hsl(var(--chart-1))',

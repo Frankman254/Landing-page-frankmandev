@@ -1,0 +1,37 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#09090B"/>
+  <circle cx="226" cy="188" r="180" fill="#F5C400" fill-opacity="0.2"/>
+  <circle cx="1332" cy="220" r="220" fill="#D72638" fill-opacity="0.22"/>
+  <circle cx="830" cy="786" r="280" fill="white" fill-opacity="0.06"/>
+  <g opacity="0.08">
+    <path d="M0 60H1600" stroke="white"/>
+    <path d="M0 180H1600" stroke="white"/>
+    <path d="M0 300H1600" stroke="white"/>
+    <path d="M0 420H1600" stroke="white"/>
+    <path d="M0 540H1600" stroke="white"/>
+    <path d="M0 660H1600" stroke="white"/>
+    <path d="M0 780H1600" stroke="white"/>
+    <path d="M120 0V900" stroke="white"/>
+    <path d="M280 0V900" stroke="white"/>
+    <path d="M440 0V900" stroke="white"/>
+    <path d="M600 0V900" stroke="white"/>
+    <path d="M760 0V900" stroke="white"/>
+    <path d="M920 0V900" stroke="white"/>
+    <path d="M1080 0V900" stroke="white"/>
+    <path d="M1240 0V900" stroke="white"/>
+    <path d="M1400 0V900" stroke="white"/>
+  </g>
+  <g opacity="0.15">
+    <rect x="1048" y="146" width="280" height="280" rx="64" fill="#0C0C0F"/>
+    <rect x="1095" y="186" width="40" height="188" rx="20" fill="#F5C400"/>
+    <rect x="1095" y="186" width="122" height="34" rx="17" fill="#D72638"/>
+    <rect x="1095" y="258" width="100" height="30" rx="15" fill="#F7F3EB"/>
+    <path d="M1228 186H1256C1281 186 1298 203 1298 228V344C1298 369 1281 386 1256 386H1228" stroke="#F7F3EB" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1228 216H1248C1261 216 1270 225 1270 238V334C1270 347 1261 356 1248 356H1228V216Z" fill="#F7F3EB"/>
+  </g>
+  <text x="120" y="160" fill="#F5C400" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="12">SISTEMAS / WEB / PRODUCCION</text>
+  <text x="120" y="310" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="116" font-weight="900" letter-spacing="16">FRANKMAN DEV</text>
+  <text x="120" y="408" fill="#B4B4BD" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="8">EDITORIAL PERSONAL BRAND FOR REAL-WORLD SOFTWARE</text>
+  <rect x="120" y="470" width="190" height="12" rx="6" fill="#F5C400"/>
+  <rect x="328" y="470" width="92" height="12" rx="6" fill="#D72638"/>
+</svg>

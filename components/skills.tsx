@@ -12,9 +12,9 @@ const Skills = () => {
                 {t.data.skills.map((category, categoryIndex) => (
                     <div 
                         key={categoryIndex} 
-                        className="p-6 rounded-xl border border-card-border bg-card-bg dark:bg-card-bg"
+                        className="p-6 rounded-2xl border border-card-border bg-card-bg dark:bg-card-bg shadow-md"
                     >
-                        <h3 className="text-xl font-semibold mb-4 text-center">
+                        <h3 className="text-xl font-semibold mb-4 text-center text-brand-red">
                             {category.title}
                         </h3>
                         <ul className="space-y-3">
