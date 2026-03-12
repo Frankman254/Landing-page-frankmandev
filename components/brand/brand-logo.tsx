@@ -2,7 +2,7 @@ import BrandMark from './brand-mark';
 
 type BrandLogoProps = {
 	className?: string;
-	textTone?: 'light' | 'dark';
+	textTone?: 'light' | 'dark' | 'adaptive';
 	showTagline?: boolean;
 	markAnimated?: boolean;
 };
@@ -13,9 +13,18 @@ const BrandLogo = ({
 	showTagline = true,
 	markAnimated = false,
 }: BrandLogoProps) => {
-	const textColor = textTone === 'light' ? 'text-white' : 'text-foreground';
+	const textColor =
+		textTone === 'light'
+			? 'text-white'
+			: textTone === 'adaptive'
+				? 'text-foreground dark:text-white'
+				: 'text-foreground';
 	const mutedColor =
-		textTone === 'light' ? 'text-white/70' : 'text-muted-foreground';
+		textTone === 'light'
+			? 'text-white/70'
+			: textTone === 'adaptive'
+				? 'text-muted-foreground dark:text-white/70'
+				: 'text-muted-foreground';
 
 	return (
 		<div className={`inline-flex items-center gap-4 ${className}`}>
@@ -42,7 +51,7 @@ const BrandLogo = ({
 					<span
 						className={`mt-3 text-[11px] uppercase tracking-[0.36em] ${mutedColor}`}
 					>
-						Systems Engineer / Web Developer
+						Full-Stack Software Developer
 					</span>
 				) : null}
 			</div>

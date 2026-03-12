@@ -4,19 +4,25 @@ export const translations = {
 	es: {
 		// Introduction
 		introduction: {
-			greeting: 'Hola, soy Francisco Rodriguez',
+			greeting: 'Hola, soy Francisco Rodriguez Salazar',
 			name: 'Frankman Dev',
-			role: 'Ingeniero en Sistemas y Desarrollador Web',
+			role: 'Desarrollador de Software Full-Stack',
+			summary:
+				'Desarrollo herramientas internas, automatizacion de procesos y aplicaciones web listas para produccion en entornos privados y gubernamentales.',
+			brandCard:
+				'Software, automatizacion e infraestructura para operaciones reales.',
+			backdropKicker: 'Software, procesos e infraestructura',
+			backdropHeadline: 'Soluciones que optimizan operaciones reales.',
 			email: 'frankman254@gmail.com',
 			phone: '+507 6075-8976',
-			contactButton: 'Contacta conmigo',
+			contactButton: 'Hablemos de tu proyecto',
 			downloadCV: 'Descargar CV',
 		},
 		// About Me
 		aboutMe: {
-			title: 'Sobre Mi',
-			subtitle: 'Conóceme',
-			description: "Desarrollador Web e Ingeniero en Sistemas con experiencia en el desarrollo, mantenimiento y mejora de sistemas en entornos institucionales de producción. Trabajo tanto en aplicaciones frontend modernas como en sistemas backend existentes, realizando adecuaciones en bases de datos, optimización de procesos y despliegues en servidores Linux. Enfocado en la estabilidad, el rendimiento y la mejora continua de los sistemas.",
+			title: 'Perfil',
+			subtitle: 'Como trabajo',
+			description: "Desarrollador de Software Full-Stack con 2 años de experiencia construyendo, manteniendo y mejorando sistemas utilizados en organizaciones privadas y entidades gubernamentales. Diseno herramientas internas, automatizo procesos y despliego aplicaciones web conectando frontend, backend, bases de datos e infraestructura. Mi enfoque es practico: soluciones claras, mantenibles y listas para produccion.",
 			contactButton: 'Contáctame',
 		},
 		// Skills
@@ -27,12 +33,12 @@ export const translations = {
 		// Services
 		services: {
 			title: 'Servicios',
-			subtitle: 'Que ofrezco',
+			subtitle: 'Soluciones que ofrezco',
 		},
 		// Experience
 		experience: {
 			title: 'Experiencia',
-			subtitle: 'Experiencia que tengo',
+			subtitle: 'Experiencia en produccion',
 		},
 		// Personal
 		personal: {
@@ -49,7 +55,7 @@ export const translations = {
 		// Contact
 		contact: {
 			title: 'Contacta conmigo',
-			subtitle: 'Ponte en contacto conmigo 👋🏻',
+			subtitle: 'Conversemos sobre tu sistema, automatizacion o sitio web.',
 			sendMessage: 'Enviar Mensaje',
 		},
 		// Contact Form
@@ -67,7 +73,7 @@ export const translations = {
 			services: 'Servicios',
 			portfolio: 'Portfolio',
 			contact: 'Contacto',
-			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez',
+			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez Salazar',
 		},
 		// Navbar
 		navbar: {
@@ -83,32 +89,32 @@ export const translations = {
 				{
 					name: 'Producción',
 					description:
-						'Experiencia trabajando con sistemas web reales en entornos institucionales de producción.',
+						'Experiencia en sistemas reales usados por equipos internos en entornos privados y gubernamentales.',
 				},
 				{
 					name: 'Frontend',
 					description:
-						'React, Next.js y desarrollo de interfaces modernas enfocadas en experiencia de usuario.',
+						'Interfaces modernas con React y Next.js enfocadas en claridad, velocidad y mantenimiento.',
 				},
 				{
 					name: 'Backend & Datos',
 					description:
-						'Node.js, Express y SQL Server con trabajo directo sobre bases de datos.',
+						'APIs, logica de negocio y SQL Server para procesos internos, validacion y trazabilidad.',
 				},
 				{
 					name: 'Infraestructura',
 					description:
-						'Despliegues, gestión de logs y soporte en servidores Linux.',
+						'Despliegues en Linux y Windows Server, IIS, Nginx, SSL y soporte en produccion.',
 				},
 				{
 					name: 'Aprendizaje',
 					description:
-						'Mejora continua, estudio de nuevas tecnologías y buenas prácticas.',
+						'Actualizacion continua en arquitectura, automatizacion y buenas practicas para construir soluciones robustas.',
 				},
 				{
 					name: 'Valores',
 					description:
-						'Compromiso, responsabilidad y enfoque en soluciones sostenibles.',
+						'Comunicacion clara, responsabilidad tecnica y foco en resultados utiles para el negocio.',
 				},
 			],
 			skills: [
@@ -129,62 +135,64 @@ export const translations = {
 						'Node.js',
 						'Express.js',
 						'SQL Server',
-						'Autenticación por sesiones',
 						'APIs REST',
+						'Arquitectura por controladores',
+						'Integracion de sistemas',
 					],
 				},
 				{
 					title: 'Infraestructura / Producción',
 					items: [
 						'Linux (servidores)',
-						'Despliegues manuales',
-						'Gestión de logs',
-						'Variables de entorno',
-						'NVM / Node versions',
+						'Windows Server',
+						'IIS / Nginx',
+						'SSL / DNS / reverse proxy',
+						'Despliegues y soporte en produccion',
 					],
 				},
 				{
 					title: 'Buenas Prácticas',
 					items: [
-						'Código mantenible',
-						'Mejora de sistemas legacy',
-						'Trabajo con datos reales',
-						'Resolución de incidencias',
+						'MVP funcional',
+						'Arquitectura modular',
+						'Automatizacion de procesos',
+						'Documentacion y resolucion de incidencias',
 					],
 				},
 			],
 			services: [
 				{
-					title: 'Desarrollo Web',
+					title: 'Herramientas internas y automatizacion',
 					features: [
-						'Desarrollo de sitios web personalizados',
-						'Diseño y desarrollo responsive',
-						'Optimización SEO',
-						'Desarrollo de aplicaciones web',
-						'Gestión de contenido',
-						'Comercio electrónico',
-						'Mantenimiento y soporte continuo',
+						'Paneles y sistemas administrativos',
+						'Automatizacion de tareas y flujos repetitivos',
+						'Formularios, dashboards y reportes',
+						'Integracion con bases de datos y procesos existentes',
+						'Migracion de herramientas de escritorio a web',
+						'Mejora de procesos operativos',
+						'Soporte evolutivo y mantenimiento',
 					],
 				},
 				{
-					title: 'Servicios Técnicos',
+					title: 'Aplicaciones web a medida',
 					features: [
-						'Reparacion de Computadoras',
-						'Instalacion de Sistemas de Seguridad',
-						'Instalacion de Sistemas Operativos',
-						'Reparacion de Celulares / Consolas de Video juegos',
-						'Mantenimiento de Computadoras, Consolas, Celulares',
+						'Sitios y aplicaciones web para empresas y profesionales',
+						'Frontend con React y Next.js',
+						'Backend con APIs y logica de negocio',
+						'Arquitectura modular y escalable',
+						'Optimizacion de rendimiento y mantenibilidad',
+						'Integracion con servicios y sistemas existentes',
 					],
 				},
 				{
-					title: 'UI/UX Design',
+					title: 'Infraestructura y despliegue',
 					features: [
-						'Diseño intuitivo para una experiencia de usuario fluida',
-						'Prototipado interactivo para visualizar la interfaz',
-						'Investigación de usuarios para comprender necesidades y expectativas',
-						'Optimización de la usabilidad para mejorar la accesibilidad',
-						'Pruebas de usabilidad para evaluar la experiencia',
-						'Diseño responsive para adaptarse a diferentes dispositivos',
+						'Configuracion de Linux y Windows Server',
+						'IIS, Nginx, SSL, DNS y proxies inversos',
+						'Publicacion de aplicaciones Node.js',
+						'Resolucion de incidencias 403 / 502 y conectividad',
+						'Monitoreo basico, logs y soporte operativo',
+						'Mantenimiento de entornos productivos',
 					],
 				},
 			],
@@ -192,12 +200,12 @@ export const translations = {
 				{
 					title: 'Experience',
 					descriptions: [
-						'+2 años de experiencia',
-						'Desarrollo y mejora de sistemas web utilizados en entornos institucionales de producción.',
-						'Adecuación de tablas, edición de registros y validación de datos en SQL Server.',
-						'Puesta en marcha de código en producción y soporte operativo en servidores Linux.',
-						'Gestión y limpieza de logs, monitoreo básico y soporte post-despliegue.',
-						'Mejora continua de sistemas orientada a estabilidad, rendimiento y mantenibilidad.',
+						'2 años de experiencia en entornos privados y gubernamentales.',
+						'Desarrollo y mantenimiento de sistemas web usados en operaciones reales.',
+						'Diseno de herramientas internas para reducir tareas manuales y mejorar procesos.',
+						'Trabajo con SQL Server, APIs, frontend moderno e integracion de sistemas.',
+						'Despliegue y soporte sobre Linux, Windows Server, IIS, Nginx, SSL y proxies inversos.',
+						'Resolucion de incidencias tecnicas en produccion con enfoque en continuidad operativa.',
 					],
 				},
 			],
@@ -266,19 +274,25 @@ export const translations = {
 	en: {
 		// Introduction
 		introduction: {
-			greeting: 'Hello, I am Francisco Rodriguez',
+			greeting: 'Hello, I am Francisco Rodriguez Salazar',
 			name: 'Frankman Dev',
-			role: 'Systems Engineer and Web Developer',
+			role: 'Full-Stack Software Developer',
+			summary:
+				'I build internal tools, process automation, and production-ready web applications for private and government environments.',
+			brandCard:
+				'Software, automation, and infrastructure for real operational workflows.',
+			backdropKicker: 'Software, processes, and infrastructure',
+			backdropHeadline: 'Solutions that improve real operations.',
 			email: 'frankman254@gmail.com',
 			phone: '+507 6075-8976',
-			contactButton: 'Contact me',
+			contactButton: 'Let’s talk about your project',
 			downloadCV: 'Download CV',
 		},
 		// About Me
 		aboutMe: {
-			title: 'About Me',
-			subtitle: 'Get to know me',
-			description: "Web Developer and Systems Engineer with experience building, maintaining, and improving production systems in institutional environments. I work on modern frontend applications as well as existing backend systems, performing database adjustments, process optimization, and production deployments on Linux servers. Focused on system stability, performance, and continuous improvement.",
+			title: 'Profile',
+			subtitle: 'How I work',
+			description: "Full-Stack Software Developer with 2 years of experience building, maintaining, and improving systems used in private organizations and government environments. I design internal tools, automate processes, and deploy web applications by connecting frontend, backend, databases, and infrastructure. My approach is practical: clear, maintainable, production-ready solutions.",
 			contactButton: 'Contact me',
 		},
 		// Experience
@@ -289,12 +303,12 @@ export const translations = {
 		// Services
 		services: {
 			title: 'Services',
-			subtitle: 'What I offer',
+			subtitle: 'Solutions I offer',
 		},
 		// Experience
 		experience: {
 			title: 'Experience',
-			subtitle: 'Experience I have',
+			subtitle: 'Production experience',
 		},
 		// Personal
 		personal: {
@@ -311,7 +325,7 @@ export const translations = {
 		// Contact
 		contact: {
 			title: 'Contact me',
-			subtitle: 'Get in touch with me 👋🏻',
+			subtitle: 'Let’s talk about your system, automation, or website.',
 			sendMessage: 'Send Message',
 		},
 		// Contact Form
@@ -329,7 +343,7 @@ export const translations = {
 			services: 'Services',
 			portfolio: 'Portfolio',
 			contact: 'Contact',
-			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez',
+			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez Salazar',
 		},
 		// Navbar
 		navbar: {
@@ -345,32 +359,32 @@ export const translations = {
 				{
 					name: 'Production',
 					description:
-						'Experience working with real-world web systems in institutional production environments.',
+						'Experience working on real systems used by internal teams in private and government environments.',
 				},
 				{
 					name: 'Frontend',
 					description:
-						'React, Next.js, and modern interface development focused on user experience.',
+						'Modern React and Next.js interfaces focused on clarity, speed, and maintainability.',
 				},
 				{
 					name: 'Backend & Data',
 					description:
-						'Node.js, Express, and SQL Server with hands-on database work.',
+						'APIs, business logic, and SQL Server for internal processes, validation, and traceability.',
 				},
 				{
 					name: 'Infrastructure',
 					description:
-						'Deployments, log management, and Linux server support.',
+						'Deployments on Linux and Windows Server, IIS, Nginx, SSL, and production support.',
 				},
 				{
 					name: 'Learning',
 					description:
-						'Continuous improvement, learning new technologies, and applying best practices.',
+						'Continuous growth in architecture, automation, and best practices to build stronger solutions.',
 				},
 				{
 					name: 'Values',
 					description:
-						'Commitment, responsibility, and focus on sustainable solutions.',
+						'Clear communication, technical responsibility, and focus on useful business outcomes.',
 				},
 			],
 			skills: [
@@ -391,62 +405,64 @@ export const translations = {
 						'Node.js',
 						'Express.js',
 						'SQL Server',
-						'Session Authentication',
 						'REST APIs',
+						'Controller-based architecture',
+						'Systems integration',
 					],
 				},
 				{
 					title: 'Infrastructure / Production',
 					items: [
 						'Linux (servers)',
-						'Manual deployments',
-						'Log management',
-						'Environment variables',
-						'NVM / Node versions',
+						'Windows Server',
+						'IIS / Nginx',
+						'SSL / DNS / reverse proxy',
+						'Production deployments and support',
 					],
 				},
 				{
 					title: 'Best Practices',
 					items: [
-						'Maintainable code',
-						'Legacy system improvement',
-						'Working with real data',
-						'Issue resolution',
+						'Functional MVP mindset',
+						'Modular architecture',
+						'Process automation',
+						'Documentation and incident resolution',
 					],
 				},
 			],
 			services: [
 				{
-					title: 'Web Development',
+					title: 'Internal tools and automation',
 					features: [
-						'Custom website development',
-						'Responsive design and development',
-						'SEO optimization',
-						'Web application development',
-						'Content management',
-						'E-commerce',
-						'Ongoing maintenance and support',
+						'Administrative panels and internal systems',
+						'Automation of repetitive tasks and workflows',
+						'Forms, dashboards, and reporting tools',
+						'Integration with databases and existing processes',
+						'Migration of desktop tools to web applications',
+						'Operational workflow improvement',
+						'Ongoing support and maintenance',
 					],
 				},
 				{
-					title: 'Technical Services',
+					title: 'Custom web applications',
 					features: [
-						'Computer Repair',
-						'Security System Installation',
-						'Operating System Installation',
-						'Phone / Video Game Console Repair',
-						'Computer, Console, Phone Maintenance',
+						'Websites and web applications for companies and professionals',
+						'Frontend with React and Next.js',
+						'Backend with APIs and business logic',
+						'Modular and scalable architecture',
+						'Performance and maintainability optimization',
+						'Integration with existing services and systems',
 					],
 				},
 				{
-					title: 'UI/UX Design',
+					title: 'Infrastructure and deployment',
 					features: [
-						'Intuitive design for a smooth user experience',
-						'Interactive prototyping to visualize the interface',
-						'User research to understand needs and expectations',
-						'Usability optimization to improve accessibility',
-						'Usability testing to evaluate the experience',
-						'Responsive design to adapt to different devices',
+						'Linux and Windows Server setup',
+						'IIS, Nginx, SSL, DNS, and reverse proxies',
+						'Node.js application publishing',
+						'403 / 502 incident and connectivity troubleshooting',
+						'Basic monitoring, logs, and operational support',
+						'Maintenance of production environments',
 					],
 				},
 			],
@@ -454,12 +470,12 @@ export const translations = {
 				{
 					title: 'Experience',
 					descriptions: [
-						'+2 years of experience',
-						'Development and improvement of web systems used in institutional production environments.',
-						'Database adjustments, data editing and validation in SQL Server.',
-						'Deployment of code in production and operational support on Linux servers.',
-						'Log management, basic monitoring and post-deployment support.',
-						'Continuous system improvement focused on stability, performance and maintainability.',
+						'2 years of experience across private and government environments.',
+						'Development and maintenance of web systems used in real operations.',
+						'Design of internal tools to reduce manual work and improve processes.',
+						'Hands-on work with SQL Server, APIs, modern frontend, and systems integration.',
+						'Deployment and support across Linux, Windows Server, IIS, Nginx, SSL, and reverse proxies.',
+						'Production incident resolution with focus on operational continuity.',
 					],
 				},
 			],

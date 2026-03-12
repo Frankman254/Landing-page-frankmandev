@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="pb-40">
       <Navbar/>
-      <div className="relative mt-[-40px] sm:mt-[-70px] md:mt-[-100px] lg:mt-[-130px] xl:mt-[-160px]">
+      <div className="relative mt-[-55px] sm:mt-[-85px] md:mt-[-115px] lg:mt-[-145px] xl:mt-[-175px]">
       <Introduction/>
       <AboutMe/>
       <Skills />

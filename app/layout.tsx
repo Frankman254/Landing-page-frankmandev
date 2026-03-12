@@ -14,8 +14,9 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://landing-page-frankmandev.netlify.app"),
-  title: "Frankman Dev",
-  description: "Frankman Dev | Systems Engineer and Web Developer",
+  title: "Francisco Rodriguez Salazar | Frankman Dev",
+  description:
+    "Full-Stack Software Developer focused on internal tools, process automation, web infrastructure, and production-ready systems.",
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -28,14 +29,16 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Frankman Dev",
-    description: "Systems Engineer and Web Developer",
+    title: "Francisco Rodriguez Salazar | Frankman Dev",
+    description:
+      "Full-Stack Software Developer focused on internal tools, process automation, web infrastructure, and production-ready systems.",
     images: ["/brand-banner.svg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Frankman Dev",
-    description: "Systems Engineer and Web Developer",
+    title: "Francisco Rodriguez Salazar | Frankman Dev",
+    description:
+      "Full-Stack Software Developer focused on internal tools, process automation, web infrastructure, and production-ready systems.",
     images: ["/brand-banner.svg"],
   },
 };
