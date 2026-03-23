@@ -13,6 +13,11 @@ export function useScrollReveal(options?: IntersectionObserverInit) {
     );
     const bars = container.querySelectorAll<HTMLElement>(".bar-animated");
 
+    // Progressive enhancement: content stays visible unless JS successfully
+    // initializes the reveal behavior on the client.
+    reveals.forEach((el) => el.classList.add("reveal-init"));
+    bars.forEach((el) => el.classList.add("bar-init"));
+
     const revealObs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -43,6 +48,8 @@ export function useScrollReveal(options?: IntersectionObserverInit) {
     return () => {
       revealObs.disconnect();
       barObs.disconnect();
+      reveals.forEach((el) => el.classList.remove("reveal-init"));
+      bars.forEach((el) => el.classList.remove("bar-init"));
     };
   }, []);
 

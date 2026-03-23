@@ -5,7 +5,13 @@
       "Bash(npx tsc:*)",
       "Bash(npm run:*)",
       "Bash(npm --version)",
-      "Bash(npm update:*)"
+      "Bash(npm update:*)",
+      "Bash(cd:*)",
+      "Bash(node -e \":*)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000/_next/static/css/*.css)",
+      "Bash(node:*)",
+      "Bash(npx next:*)"
     ]
   }
 }
