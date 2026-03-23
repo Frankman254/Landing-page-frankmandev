@@ -22,7 +22,8 @@ export const translations = {
 		aboutMe: {
 			title: 'Perfil',
 			subtitle: 'Como trabajo',
-			description: "Desarrollador de Software Full-Stack con 2 años de experiencia construyendo, manteniendo y mejorando sistemas utilizados en organizaciones privadas y entidades gubernamentales. Diseno herramientas internas, automatizo procesos y despliego aplicaciones web conectando frontend, backend, bases de datos e infraestructura. Mi enfoque es practico: soluciones claras, mantenibles y listas para produccion.",
+			description:
+				'Desarrollador de Software Full-Stack con 2 años de experiencia construyendo, manteniendo y mejorando sistemas utilizados en organizaciones privadas y entidades gubernamentales. Diseño herramientas internas, automatizo procesos y despliego aplicaciones web conectando frontend, backend, bases de datos e infraestructura. Mi enfoque es practico: soluciones claras, mantenibles y listas para produccion.',
 			contactButton: 'Contáctame',
 		},
 		// Skills
@@ -55,7 +56,8 @@ export const translations = {
 		// Contact
 		contact: {
 			title: 'Contacta conmigo',
-			subtitle: 'Conversemos sobre tu sistema, automatizacion o sitio web.',
+			subtitle:
+				'Conversemos sobre tu sistema, automatizacion o sitio web.',
 			sendMessage: 'Enviar Mensaje',
 		},
 		// Contact Form
@@ -65,6 +67,8 @@ export const translations = {
 			messagePlaceholder: 'Tu Mensaje',
 			submitButton: 'Enviar',
 			successMessage: '¡Formulario enviado con éxito!',
+			errorMessage:
+				'Hubo un error al enviar. Intenta de nuevo o escríbeme directamente a frankman254@gmail.com',
 		},
 		// Footer
 		footer: {
@@ -99,7 +103,7 @@ export const translations = {
 				{
 					name: 'Backend & Datos',
 					description:
-						'APIs, logica de negocio y SQL Server para procesos internos, validacion y trazabilidad.',
+						'APIs, lógica de negocio y SQL Server para procesos internos, validación y trazabilidad.',
 				},
 				{
 					name: 'Infraestructura',
@@ -178,7 +182,7 @@ export const translations = {
 					features: [
 						'Sitios y aplicaciones web para empresas y profesionales',
 						'Frontend con React y Next.js',
-						'Backend con APIs y logica de negocio',
+						'Backend con APIs y lógica de negocio',
 						'Arquitectura modular y escalable',
 						'Optimizacion de rendimiento y mantenibilidad',
 						'Integracion con servicios y sistemas existentes',
@@ -202,10 +206,10 @@ export const translations = {
 					descriptions: [
 						'2 años de experiencia en entornos privados y gubernamentales.',
 						'Desarrollo y mantenimiento de sistemas web usados en operaciones reales.',
-						'Diseno de herramientas internas para reducir tareas manuales y mejorar procesos.',
+						'Diseño de herramientas internas para reducir tareas manuales y mejorar procesos.',
 						'Trabajo con SQL Server, APIs, frontend moderno e integracion de sistemas.',
 						'Despliegue y soporte sobre Linux, Windows Server, IIS, Nginx, SSL y proxies inversos.',
-						'Resolucion de incidencias tecnicas en produccion con enfoque en continuidad operativa.',
+						'Resolución de incidencias técnicas en producción con enfoque en continuidad operativa.',
 					],
 				},
 			],
@@ -265,9 +269,10 @@ export const translations = {
 				],
 			},
 			contact: [
-				{ title: 'Teléfono' },
+				{ title: 'LinkedIn' },
 				{ title: 'Github' },
 				{ title: 'Email' },
+				{ title: 'Teléfono' },
 			],
 		},
 	},
@@ -292,7 +297,8 @@ export const translations = {
 		aboutMe: {
 			title: 'Profile',
 			subtitle: 'How I work',
-			description: "Full-Stack Software Developer with 2 years of experience building, maintaining, and improving systems used in private organizations and government environments. I design internal tools, automate processes, and deploy web applications by connecting frontend, backend, databases, and infrastructure. My approach is practical: clear, maintainable, production-ready solutions.",
+			description:
+				'Full-Stack Software Developer with 2 years of experience building, maintaining, and improving systems used in private organizations and government environments. I design internal tools, automate processes, and deploy web applications by connecting frontend, backend, databases, and infrastructure. My approach is practical: clear, maintainable, production-ready solutions.',
 			contactButton: 'Contact me',
 		},
 		// Experience
@@ -335,6 +341,8 @@ export const translations = {
 			messagePlaceholder: 'Your Message',
 			submitButton: 'Send',
 			successMessage: '✅ Form submitted successfully!',
+			errorMessage:
+				'Something went wrong. Please try again or email me directly at frankman254@gmail.com',
 		},
 		// Footer
 		footer: {
@@ -535,9 +543,10 @@ export const translations = {
 				],
 			},
 			contact: [
-				{ title: 'Phone' },
+				{ title: 'LinkedIn' },
 				{ title: 'Github' },
 				{ title: 'Email' },
+				{ title: 'Phone' },
 			],
 		},
 	},
