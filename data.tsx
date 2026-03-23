@@ -102,72 +102,6 @@ export const itemsNavbar = [
 	},
 ];
 
-export const dataSlider = [
-	{
-		id: 1,
-		url: '/slider-1.jpg',
-	},
-	{
-		id: 2,
-		url: '/slider-2.jpg',
-	},
-	{
-		id: 3,
-		url: '/slider-3.jpg',
-	},
-	{
-		id: 4,
-		url: '/slider-4.jpg',
-	},
-	{
-		id: 5,
-		url: '/slider-5.jpg',
-	},
-	{
-		id: 6,
-		url: '/slider-6.jpg',
-	},
-	{
-		id: 7,
-		url: '/slider-7.jpg',
-	},
-	{
-		id: 8,
-		url: '/slider-8.jpg',
-	},
-	{
-		id: 9,
-		url: '/slider-9.jpg',
-	},
-	{
-		id: 10,
-		url: '/slider-10.jpg',
-	},
-	{
-		id: 11,
-		url: '/slider-11.jpg',
-	},
-	{
-		id: 12,
-		url: '/slider-12.jpg',
-	},
-	{
-		id: 13,
-		url: '/slider-13.jpg',
-	},
-	{
-		id: 14,
-		url: '/slider-14.jpg',
-	},
-	{
-		id: 15,
-		url: '/slider-15.jpg',
-	},
-	{
-		id: 16,
-		url: '/slider-16.jpg',
-	},
-];
 
 export const dataPortfolio = [
 	{
@@ -181,12 +115,12 @@ export const dataPortfolio = [
 	},
 	{
 		id: 2,
-		title: 'App Black Jack Vite',
-		image: '/app-black-jack.png',
-		urlGithub: 'https://github.com/Frankman254/black-jack-app',
-		urlDemo: 'https://frankmandev-blackjack.netlify.app/',
-		alt: 'App Black Jack Vite',
-		tags: ['Vite', 'JavaScript', 'CSS'],
+		title: 'FrankmanDev Playground',
+		image: '/playground.png',
+		urlGithub: 'https://github.com/Frankman254/frankmandevplayground',
+		urlDemo: 'https://frankmandevplayground.netlify.app/',
+		alt: 'FrankmanDev Playground — plataforma multi-módulo',
+		tags: ['Next.js', 'TypeScript', 'Supabase'],
 	},
 	{
 		id: 3,
