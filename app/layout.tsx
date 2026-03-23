@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es" suppressHydrationWarning>
-			<body className={urbanist.className}>
+			<body className={urbanist.className} suppressHydrationWarning>
 				<Script
 					id="theme-script"
 					strategy="beforeInteractive"
