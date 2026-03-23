@@ -3,7 +3,6 @@ import React from "react";
 import { useLanguage } from "./language-provider";
 import Title from "./shared/title";
 import { Check } from "lucide-react";
-import { dataExperience } from "@/data";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const Experience = () => {
@@ -30,27 +29,24 @@ const Experience = () => {
                 ))}
             </div>
 
-            {/* Animated skill proficiency bars */}
+            {/* Nivel por tecnología (sin barras): alineado al uso real en producción */}
             <div className="grid md:grid-cols-2 gap-6">
-                {dataExperience.map((category, cIndex) => (
+                {t.data.skillProficiency.map((category, cIndex) => (
                     <div
-                        key={category.id}
+                        key={category.title}
                         className={`reveal delay-${cIndex + 2} p-6 rounded-2xl border border-card-border bg-card-bg shadow-md`}
                     >
                         <h3 className="text-lg font-semibold mb-5 text-brand-red">{category.title}</h3>
-                        <ul className="space-y-4">
-                            {category.experience.map((skill, sIndex) => (
-                                <li key={sIndex}>
-                                    <div className="flex justify-between mb-1.5">
-                                        <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                                        <span className="text-xs text-muted-foreground">{skill.subtitle}</span>
-                                    </div>
-                                    <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
-                                        <div
-                                            className="bar-animated h-full rounded-full bg-gradient-to-r from-brand-yellow to-brand-red"
-                                            style={{ '--bar-target': `${skill.value}%` } as React.CSSProperties}
-                                        />
-                                    </div>
+                        <ul className="space-y-0 divide-y divide-border/60">
+                            {category.skills.map((skill, sIndex) => (
+                                <li
+                                    key={`${skill.name}-${sIndex}`}
+                                    className="flex items-center justify-between gap-4 py-3 first:pt-0"
+                                >
+                                    <span className="text-sm font-medium text-foreground">{skill.name}</span>
+                                    <span className="shrink-0 rounded-md border border-card-border bg-muted/40 px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                                        {t.skillLevels[skill.level]}
+                                    </span>
                                 </li>
                             ))}
                         </ul>

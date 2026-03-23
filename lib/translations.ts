@@ -41,6 +41,11 @@ export const translations = {
 			title: 'Experiencia',
 			subtitle: 'Experiencia en produccion',
 		},
+		skillLevels: {
+			basic: 'Básico',
+			intermediate: 'Intermedio',
+			experienced: 'Experimentado',
+		},
 		// Personal
 		personal: {
 			title: 'Personal',
@@ -213,6 +218,28 @@ export const translations = {
 					],
 				},
 			],
+			skillProficiency: [
+				{
+					title: 'Desarrollo Frontend 💄',
+					skills: [
+						{ name: 'HTML', level: 'experienced' as const },
+						{ name: 'CSS', level: 'experienced' as const },
+						{ name: 'JavaScript', level: 'intermediate' as const },
+						{ name: 'Tailwind CSS', level: 'experienced' as const },
+						{ name: 'React', level: 'experienced' as const },
+					],
+				},
+				{
+					title: 'Desarrollo Backend 🥷',
+					skills: [
+						{ name: 'Node.js', level: 'intermediate' as const },
+						{ name: 'Python', level: 'intermediate' as const },
+						{ name: 'SQL Server', level: 'intermediate' as const },
+						{ name: 'Next.js', level: 'experienced' as const },
+						{ name: 'Express', level: 'intermediate' as const },
+					],
+				},
+			],
 			// Personal
 			personal: {
 				title: 'Personal',
@@ -315,6 +342,11 @@ export const translations = {
 		experience: {
 			title: 'Experience',
 			subtitle: 'Production experience',
+		},
+		skillLevels: {
+			basic: 'Basic',
+			intermediate: 'Intermediate',
+			experienced: 'Experienced',
 		},
 		// Personal
 		personal: {
@@ -484,6 +516,28 @@ export const translations = {
 						'Hands-on work with SQL Server, APIs, modern frontend, and systems integration.',
 						'Deployment and support across Linux, Windows Server, IIS, Nginx, SSL, and reverse proxies.',
 						'Production incident resolution with focus on operational continuity.',
+					],
+				},
+			],
+			skillProficiency: [
+				{
+					title: 'Frontend Development 💄',
+					skills: [
+						{ name: 'HTML', level: 'experienced' as const },
+						{ name: 'CSS', level: 'experienced' as const },
+						{ name: 'JavaScript', level: 'intermediate' as const },
+						{ name: 'Tailwind CSS', level: 'experienced' as const },
+						{ name: 'React', level: 'experienced' as const },
+					],
+				},
+				{
+					title: 'Backend Development 🥷',
+					skills: [
+						{ name: 'Node.js', level: 'intermediate' as const },
+						{ name: 'Python', level: 'intermediate' as const },
+						{ name: 'SQL Server', level: 'intermediate' as const },
+						{ name: 'Next.js', level: 'experienced' as const },
+						{ name: 'Express', level: 'intermediate' as const },
 					],
 				},
 			],

@@ -96,22 +96,6 @@ html, body {
 .animate-fade-up-4 { animation: fade-up 0.7s 0.46s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .animate-fade-up-5 { animation: fade-up 0.7s 0.58s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
-/* ── Skill Bar Animation ──────────────────────────────────── */
-@keyframes bar-grow {
-  from { width: 0%; }
-  to   { width: var(--bar-target, 0%); }
-}
-.bar-animated {
-  width: var(--bar-target, 0%);
-}
-.bar-animated.bar-init {
-  animation: bar-grow 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-play-state: paused;
-}
-.bar-play {
-  animation-play-state: running;
-}
-
 /* ── Brand Mark SVG ──────────────────────────────────────── */
 .brand-mark {
   width: 100%;
@@ -232,10 +216,6 @@ html, body {
   .animate-fade-up-5 {
     animation: none;
     opacity: 1;
-  }
-  .bar-animated {
-    animation: none;
-    width: var(--bar-target, 0%);
   }
 }
 
