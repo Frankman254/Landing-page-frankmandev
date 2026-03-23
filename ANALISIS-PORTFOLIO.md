@@ -1,5 +1,5 @@
 # Análisis del Portfolio — Frankman Dev
-> Fecha: 2026-03-22 | Generado por Claude Code
+> Última actualización: 2026-03-23 | Generado por Claude Code
 
 ---
 
@@ -13,16 +13,58 @@
 
 ---
 
-## PARTE 1 — ANÁLISIS COMO RECLUTADOR SENIOR
+## ✅ LOG DE CAMBIOS REALIZADOS
+
+### Sesión 2026-03-23
+
+**Dependencias**
+- ✅ Eliminado `"node": "^25.4.0"` de `dependencies` — Node no es un paquete npm
+- ✅ Actualizado `lucide-react` 0.462.0 → 0.577.0 (115 versiones de íconos nuevos)
+- ✅ Actualizado `next` 16.1.4 → 16.2.1
+- ✅ Actualizado `eslint-config-next` 16.1.4 → 16.2.1
+- ✅ Actualizado `next-themes` 0.4.3 → 0.4.6
+- ✅ Actualizado `react-hook-form` 7.54.2 → 7.72.0
+- ✅ Actualizado `resend` 4.0.1 → 4.8.0
+- ✅ Actualizado `embla-carousel-react` 8.5.1 → 8.6.0
+- ✅ Actualizado `typescript` 5.7 → 5.9.3
+- ✅ Actualizado `postcss` 8.4.49 → 8.5.8
+- ✅ Actualizados todos los `@radix-ui/*` y `@types/*` al patch más reciente
+- ⚠️ **NO actualizados** (major breaking): `react` 18→19, `tailwindcss` 3→4, `zod` 3→4, `@hookform/resolvers` 3→5, `eslint` 9→10, `tailwind-merge` 2→3
+
+**Portfolio**
+- ✅ Reemplazado "App Black Jack" por **FrankmanDev Playground** (`https://frankmandevplayground.netlify.app`)
+- ✅ Tags del Playground: Next.js, TypeScript, Supabase
+- ✅ Imagen: `playground.png` (ya existía en `/public`)
+- ⚠️ **Verificar**: URL del repo en `data.tsx` línea 120 — actualmente `github.com/Frankman254/frankmandevplayground`, cambiar si el nombre es diferente
+
+**Limpieza de assets**
+- ✅ Eliminados 13 archivos sin usar: `image-1..6.jpg`, `profile-1..3.jpeg`, `banner.png`, `logo_frankmandev.png`, `logo_frankman_dev.png`, `brand-logo.svg`, `file.svg`, `globe.svg`, `next.svg`, `window.svg`, `.jpg` (archivo corrupto), `app-black-jack.png`
+- ✅ Eliminado `dataSlider` de `data.tsx` — 16 entradas nunca importadas (slider-9 al 16 ni siquiera existían como archivos)
+
+**Bug crítico resuelto — Brand Mark negro**
+- ✅ `styled-jsx` dejó de inyectar CSS al actualizar Next.js 16.1.4 → 16.2.1 con Turbopack
+- ✅ Movidos todos los estilos del SVG brand mark de `<style jsx>` en `brand-mark.tsx` → `globals.css`
+- ✅ Colores confirmados en bundle de producción: `#f5c400` (amarillo), `#d72638` (rojo), `#0c0c0f` (fondo)
+- ✅ Animaciones del brand mark (`bgReveal`, `growUp`, `drawAcross`, `strokeDraw`, `fadeLift`, `sparkleUp`, `pulseDot`) todas funcionales
+- ✅ `prefers-reduced-motion` mantenido en `globals.css`
+
+**Scroll Reveal — fix de secciones invisibles**
+- ✅ El usuario corrigió `globals.css`: `.reveal` ahora tiene `opacity: 1` por defecto
+- ✅ La animación solo aplica cuando se agrega clase `reveal-init` (requiere JS activo)
+- ✅ Mismo patrón aplicado a `.reveal-left` y `.reveal-scale`
+- ✅ `.bar-animated` ahora muestra el valor final por defecto (sin animación si no hay JS)
+
+**Config**
+- ✅ Restaurado `images.qualities: [75, 95]` en `next.config.ts` (eliminaba warnings de slider images)
+- ✅ Agregado `allowedDevOrigins: ["192.168.50.224"]` en `next.config.ts` (elimina warning de Turbopack en red local)
+
+---
+
+## PARTE 1 — ANÁLISIS COMO RECLUTADOR SENIOR (pendiente)
 
 ### 🔴 CRÍTICO — El portfolio no respalda la experiencia declarada
 
-Dices "2 años en entornos privados y gubernamentales" pero solo muestras 3 proyectos:
-1. App Todos React (proyecto de práctica)
-2. App Black Jack (proyecto de práctica)
-3. Landing Page Portfolio (el propio portfolio)
-
-**Problema:** Ninguno valida experiencia en producción real. Un reclutador lo nota de inmediato.
+Ahora tienes 3 proyectos: App Todos, FrankmanDev Playground, Landing Page. El Playground es mejor que el Blackjack pero aún faltan proyectos de producción real.
 
 **Solución:** Si tienes trabajo real bajo NDA, agrega cards con formato:
 - Nombre genérico: "Sistema Interno — Entidad Gubernamental, Panamá"
@@ -35,11 +77,7 @@ Dices "2 años en entornos privados y gubernamentales" pero solo muestras 3 proy
 
 ### 🔴 CRÍTICO — La sección "Experiencia" no tiene formato de CV
 
-La sección actual solo tiene bullet points genéricos. No hay:
-- Nombre de empresa u organización
-- Título del cargo
-- Fechas de inicio y fin
-- Impacto medible
+La sección actual solo tiene bullet points genéricos. No hay empresa, cargo, ni fechas.
 
 **Formato recomendado:**
 ```
@@ -53,100 +91,49 @@ Entidad Gubernamental — Panamá | Ene 2023 – Presente
 
 ### 🟠 ALTO — Las estadísticas no cuadran
 
-- Dice "10+ proyectos" pero muestra 3
-- Esto genera desconfianza activa en el reclutador
+Dice "10+ proyectos" pero muestra 3. Genera desconfianza.
 
-**Solución:** O quitas el número, o muestras más proyectos, o cambias a "3+ proyectos públicos".
+**Solución:** Cambiar a "3+ proyectos públicos" o agregar más proyectos.
 
 ---
 
 ### 🟠 ALTO — Las barras de porcentaje son contradictorias
 
-Encontradas en `data.tsx`:
 | Skill | Subtitle | Value |
 |-------|----------|-------|
 | Tailwind CSS | Basic | 90% |
 | SQL Server | Basic | 90% |
-| Node JS | Intermedio | 70% |
 
-"Basic" y 90% son incompatibles. Los reclutadores técnicos lo notan.
-
-**Solución:** Eliminar barras de porcentaje completamente. Reemplazar con niveles cualitativos:
-- Avanzado / Intermedio / Familiar
+**Solución:** Eliminar barras. Reemplazar con niveles: Avanzado / Intermedio / Familiar
 
 ---
 
-### 🟠 ALTO — Servicios técnicos (reparación) dañan el posicionamiento
+### 🟠 ALTO — Servicios técnicos (reparación) en `data.tsx`
 
-En `data.tsx` existe este servicio (actualmente inactivo pero presente):
-```
-"Reparación de Computadoras"
-"Instalación de Sistemas de Seguridad"
-"Reparación de Celulares / Consolas de Video juegos"
-```
-
-Aunque no se renderiza actualmente, su existencia es un riesgo. Destruye el posicionamiento de Full-Stack Developer si alguna vez se activa.
-
-**Solución:** Eliminar ese bloque de `data.tsx`.
+El bloque "Servicios Técnicos" (reparación de celulares/consolas) existe en `data.tsx` aunque no se renderiza. Destruye el posicionamiento si se activa. **Eliminar.**
 
 ---
 
 ### 🟡 MEDIO — Los proyectos no tienen descripción de impacto
 
-Cada card de portfolio muestra título, imagen y tags pero no:
-- Qué problema resuelve
-- Para quién fue hecho
-- Qué aprendiste o qué desafío técnico superaste
+Cada card solo muestra título + imagen + tags. Falta: qué problema resuelve, para quién, resultado.
 
 ---
 
 ### 🟡 MEDIO — No hay prueba social
 
-Faltan:
-- Testimonios de clientes o colegas
-- GitHub activity / stats visibles
-- Logos de tecnologías o entornos donde trabajaste
+Faltan: testimonios, GitHub stats visibles, logos de tecnologías o entornos.
 
 ---
 
-## PARTE 2 — ANÁLISIS COMO PROGRAMADOR SENIOR
-
-### 🔴 CRÍTICO — Tailwind dynamic classes se rompen en producción
-
-**Archivo:** Múltiples componentes (`about-me.tsx`, `portfolio.tsx`, `services.tsx`, `skills.tsx`, `experience.tsx`)
-
-```tsx
-// Patrón problemático encontrado en todos los componentes
-className={`reveal delay-${index + 1}`}
-// Genera: delay-1, delay-2, delay-3...
-```
-
-Tailwind usa análisis estático en build time. Las clases generadas dinámicamente NO se incluyen en el bundle de producción. Funcionan en `dev` pero fallan en `production`.
-
-**Solución:** Agregar safelist en `tailwind.config.ts`:
-```ts
-safelist: [
-  'delay-1', 'delay-2', 'delay-3', 'delay-4', 'delay-5', 'delay-6',
-]
-```
-O usar un array estático de clases en cada componente.
-
----
+## PARTE 2 — ANÁLISIS COMO PROGRAMADOR SENIOR (pendiente)
 
 ### 🔴 CRÍTICO — Links externos sin `rel="noopener noreferrer"`
 
-**Archivo:** `components/portfolio.tsx` (líneas 47–61)
+**Archivo:** `components/portfolio.tsx` — Links con `target="_blank"` sin `rel`. Vulnerabilidad reverse tabnapping.
 
 ```tsx
-// Vulnerable a reverse tabnapping
-<Link href={data.urlGithub} target="_blank">
-<Link href={data.urlDemo} target="_blank">
-```
-
-Con `target="_blank"` sin `rel`, la página destino puede acceder a `window.opener` y redirigir la página original (reverse tabnapping attack).
-
-**Solución:**
-```tsx
+// Correcto:
 <Link href={data.urlGithub} target="_blank" rel="noopener noreferrer">
 ```
 
@@ -154,161 +141,74 @@ Con `target="_blank"` sin `rel`, la página destino puede acceder a `window.open
 
 ### 🟠 ALTO — `data.tsx` exporta JSX — mezcla datos con componentes
 
-**Archivo:** `data.tsx` (líneas 32–69, 267–343, 345–374)
-
 ```tsx
-// MAL: JSX en archivo de datos
-{
-  id: 1,
-  name: 'Producción',
-  icon: <Server />,  // ← componente React dentro de datos
-}
+icon: <Server />,  // ← JSX en archivo de datos
 ```
 
-**Problemas:**
-- Acopla datos a la vista (no puedes usar estos datos fuera de React)
-- `JSON.stringify` falla con estos datos
-- Mezcla responsabilidades (Single Responsibility Principle violado)
-
-**Solución:** Los datos deben ser strings o identificadores, los iconos se resuelven en el componente:
-```tsx
-// data.ts (sin JSX)
-{ id: 1, name: 'Producción', iconName: 'Server' }
-
-// componente
-const iconMap = { Server, Monitor, Database, ... }
-const Icon = iconMap[data.iconName]
-```
+Acopla datos a la vista. Solución: usar `iconName: 'Server'` y resolver el componente en el componente.
 
 ---
 
-### 🟠 ALTO — Datos duplicados y desincronizados
+### 🟠 ALTO — Datos desincronizados entre `data.tsx` y `translations.ts`
 
-**Archivos:** `data.tsx` vs `lib/translations.ts`
-
-`dataAboutMe` en `data.tsx` tiene `name` y `description` en español, pero `about-me.tsx` lee `t.data.aboutMe[index].name` desde `translations.ts`. Los campos de `data.tsx` **nunca se usan** — son datos muertos.
-
-Lo mismo con `dataServices`: los títulos en `data.tsx` son:
-- "Desarrollo Web", "Servicios Técnicos", "UI/UX Design"
-
-Pero `translations.ts` tiene:
-- "Herramientas internas y automatización", "Aplicaciones web a medida", "Infraestructura y despliegue"
-
-El componente usa los **iconos** de `data.tsx` y los **textos** de `translations.ts`. Los iconos no corresponden a los servicios reales (`BellPlus` → icono de notificación para "Infraestructura").
+- `dataAboutMe.name/description` → nunca se leen, `about-me.tsx` usa `translations.ts`
+- `dataServices` títulos no coinciden con los servicios de `translations.ts`
+- Iconos de `dataServices` no corresponden a los servicios reales
 
 ---
 
-### 🟠 ALTO — Resend usa dominio sandbox en producción
+### 🟠 ALTO — Resend usa dominio sandbox
 
-**Archivo:** `app/api/send/route.ts` (línea 39)
+**Archivo:** `app/api/send/route.ts` línea 39
 
 ```ts
-from: "Frankman Dev <onboarding@resend.dev>",  // ← sandbox
+from: "Frankman Dev <onboarding@resend.dev>",  // ← sandbox, solo llega al owner
 ```
 
-Con `onboarding@resend.dev` solo el dueño de la cuenta Resend recibe emails. Si un cliente usa el formulario, el email sí llega a tu Gmail pero técnicamente estás usando el dominio de prueba. Para producción real necesitas dominio verificado.
-
-**Solución:** Verificar un dominio en Resend y cambiar a:
-```ts
-from: "Frankman Dev <contact@tudominio.com>",
-```
+Verificar dominio propio en Resend y cambiar a `contact@tudominio.com`.
 
 ---
 
-### 🟡 MEDIO — El email en la introducción no es un link clickeable
+### 🟡 MEDIO — El email en la introducción no es clickeable
 
-**Archivo:** `components/introduction.tsx` (línea 28)
-
-```tsx
-// Actual — solo texto
-<p className="animate-fade-up-3 mt-3 text-muted-foreground">
-  {t.introduction.email}
-</p>
-
-// Correcto
-<a href={`mailto:${t.introduction.email}`} className="...">
-  {t.introduction.email}
-</a>
-```
+**Archivo:** `components/introduction.tsx` — texto plano, debería ser `<a href="mailto:...">`.
 
 ---
 
-### 🟡 MEDIO — Stats con i18n inline en el componente, bypaseando translations.ts
+### 🟡 MEDIO — Stats con i18n inline en componente
 
-**Archivo:** `components/about-me.tsx` (líneas 11–15)
-
-```tsx
-// MAL: i18n hardcodeado en el componente
-{ value: "2+", label: language === 'es' ? "Años de Experiencia" : "Years Experience" }
-{ value: "10+", label: language === 'es' ? "Proyectos" : "Projects" }
-```
-
-Debería estar en `lib/translations.ts` como el resto del contenido.
+**Archivo:** `components/about-me.tsx` — stats y traducciones hardcodeadas, deberían estar en `translations.ts`.
 
 ---
 
 ### 🟡 MEDIO — `import React from "react"` innecesario
 
-**Archivo:** `components/experience.tsx` (línea 1)
-
-```tsx
-import React from "react";  // ← no necesario desde React 17 / Next.js moderno
-```
-
-Next.js con JSX transform no requiere importar React. Es ruido.
-
----
-
-### 🟡 MEDIO — Negative margin hack en `page.tsx`
-
-**Archivo:** `app/page.tsx` (línea 18)
-
-```tsx
-className="relative mt-[-55px] sm:mt-[-85px] md:mt-[-115px] lg:mt-[-145px] xl:mt-[-175px]"
-```
-
-5 breakpoints de negative margin hardcodeados indican un problema estructural de layout. Es frágil y difícil de mantener.
-
----
-
-### 🔵 MENOR — `dataSlider` tiene 16 items, solo 8 se usan
-
-**Archivo:** `data.tsx` (líneas 105–170)
-
-8 entradas de slider son datos muertos. `translations.ts` solo tiene 8 imágenes con captions.
+**Archivo:** `components/experience.tsx` línea 1 — eliminar.
 
 ---
 
 ## TABLA DE PRIORIDADES
 
-| Prioridad | Tipo | Item | Archivo |
-|-----------|------|------|---------|
-| 🔴 Crítico | Contenido | Agregar proyectos reales con impacto | `data.tsx` |
-| 🔴 Crítico | Contenido | Dar formato de CV a Experience (empresa, rol, fechas) | `translations.ts` |
-| 🔴 Crítico | Bug prod | Fix Tailwind dynamic classes → safelist | `tailwind.config.ts` |
-| 🔴 Crítico | Seguridad | `rel="noopener noreferrer"` en links externos | `components/portfolio.tsx` |
-| 🟠 Alto | Contenido | Eliminar/reemplazar barras de porcentaje contradictorias | `data.tsx`, `experience.tsx` |
-| 🟠 Alto | Config | Configurar dominio Resend para producción real | `app/api/send/route.ts` |
-| 🟠 Alto | Código | Limpiar datos muertos y desincronización data.tsx vs translations.ts | `data.tsx` |
-| 🟡 Medio | Código | Sacar JSX de `data.tsx` | `data.tsx` |
-| 🟡 Medio | UX | Hacer el email un mailto link | `components/introduction.tsx` |
-| 🟡 Medio | Código | Mover stats a `translations.ts` | `components/about-me.tsx` |
-| 🟡 Medio | Código | Eliminar `import React` innecesario | `components/experience.tsx` |
-| 🔵 Menor | Limpieza | Eliminar `dataSlider` items no usados | `data.tsx` |
-
----
-
-## ESTADO DE TAREAS
-
-- [ ] Agregar proyectos de producción real (con NDA si aplica)
-- [ ] Rediseñar sección Experience con formato de CV
-- [ ] Fix safelist Tailwind para clases dinámicas
-- [ ] Agregar `rel="noopener noreferrer"` a links externos
-- [ ] Eliminar/reemplazar barras de porcentaje
-- [ ] Configurar dominio Resend
-- [ ] Limpiar desincronización `data.tsx` vs `translations.ts`
-- [ ] Sacar JSX de `data.tsx`
-- [ ] Convertir email a link `mailto:`
-- [ ] Mover stats inline a `translations.ts`
-- [ ] Eliminar `import React` innecesario en `experience.tsx`
-- [ ] Limpiar `dataSlider` a 8 items
+| Estado | Prioridad | Tipo | Item | Archivo |
+|--------|-----------|------|------|---------|
+| ✅ | — | Bug | Brand mark negro (styled-jsx → globals.css) | `globals.css`, `brand-mark.tsx` |
+| ✅ | — | Bug | Secciones invisibles (scroll reveal CSS fix) | `globals.css` |
+| ✅ | — | Config | `node` eliminado de dependencies | `package.json` |
+| ✅ | — | Config | Dependencias actualizadas | `package.json` |
+| ✅ | — | Portfolio | Black Jack → FrankmanDev Playground | `data.tsx` |
+| ✅ | — | Limpieza | 13 assets sin uso eliminados | `public/` |
+| ✅ | — | Limpieza | `dataSlider` código muerto eliminado | `data.tsx` |
+| ✅ | — | Config | `next.config.ts` restaurado con image qualities | `next.config.ts` |
+| ⬜ | 🔴 Crítico | Contenido | Agregar proyectos reales con impacto | `data.tsx`, `translations.ts` |
+| ⬜ | 🔴 Crítico | Contenido | Dar formato de CV a Experience | `translations.ts` |
+| ⬜ | 🔴 Crítico | Seguridad | `rel="noopener noreferrer"` en links | `components/portfolio.tsx` |
+| ⬜ | 🟠 Alto | Contenido | Reemplazar barras de porcentaje contradictorias | `data.tsx`, `experience.tsx` |
+| ⬜ | 🟠 Alto | Contenido | Eliminar "Servicios Técnicos" de `data.tsx` | `data.tsx` |
+| ⬜ | 🟠 Alto | Config | Configurar dominio Resend para producción | `app/api/send/route.ts` |
+| ⬜ | 🟠 Alto | Código | Limpiar desincronización `data.tsx` vs `translations.ts` | `data.tsx` |
+| ⬜ | 🟡 Medio | Código | Sacar JSX de `data.tsx` | `data.tsx` |
+| ⬜ | 🟡 Medio | UX | Convertir email a `mailto:` link | `components/introduction.tsx` |
+| ⬜ | 🟡 Medio | Código | Mover stats inline a `translations.ts` | `components/about-me.tsx` |
+| ⬜ | 🟡 Medio | Código | Eliminar `import React` innecesario | `components/experience.tsx` |
+| ⬜ | 🟡 Medio | URL | Cambiar nombre del sitio en Netlify a `frankmandev` | Netlify dashboard |
+| ⬜ | 🔵 Menor | Código | Verificar URL repo Playground en `data.tsx` línea 120 | `data.tsx` |
