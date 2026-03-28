@@ -11,30 +11,53 @@ type LanguageContextType = {
 
 const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined)
 
+function getPreferredLanguage(initialLanguage: Language): Language {
+  if (typeof window === "undefined") {
+    return initialLanguage
+  }
+
+  let savedLanguage: string | null = null
+
+  try {
+    savedLanguage = localStorage.getItem("language")
+  } catch {}
+
+  if (savedLanguage === "es" || savedLanguage === "en") {
+    return savedLanguage
+  }
+
+  const deviceLanguage = window.navigator.language?.toLowerCase()
+  if (deviceLanguage?.startsWith("es")) {
+    return "es"
+  }
+
+  return initialLanguage
+}
+
 export function LanguageProvider({
+  initialLanguage,
   children,
 }: {
+  initialLanguage: Language
   children: React.ReactNode
 }) {
-  // Inicializar siempre con "es" para que servidor y cliente coincidan
-  const [language, setLanguage] = React.useState<Language>("es")
-  const [mounted, setMounted] = React.useState(false)
+  const [language, setLanguage] = React.useState<Language>(initialLanguage)
+  const [isReady, setIsReady] = React.useState(false)
 
   React.useEffect(() => {
-    setMounted(true)
-    // Solo después de montar, cargar idioma guardado en localStorage
-    const savedLanguage = localStorage.getItem("language") as Language
-    if (savedLanguage && (savedLanguage === "es" || savedLanguage === "en")) {
-      setLanguage(savedLanguage)
-    }
-  }, [])
+    setLanguage(getPreferredLanguage(initialLanguage))
+    setIsReady(true)
+  }, [initialLanguage])
 
   React.useEffect(() => {
-    if (mounted) {
-      // Guardar idioma en localStorage cuando cambie (solo en cliente)
-      localStorage.setItem("language", language)
+    if (typeof window !== "undefined" && isReady) {
+      try {
+        localStorage.setItem("language", language)
+      } catch {}
+
+      document.cookie = `language=${language}; path=/; max-age=31536000; samesite=lax`
     }
-  }, [language, mounted])
+  }, [isReady, language])
 
   const value = React.useMemo(
     () => ({

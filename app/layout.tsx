@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/components/language-provider";
 import { LanguageScript } from "@/components/language-script";
 import Script from "next/script";
+import { cookies, headers } from "next/headers";
+import type { Language } from "@/lib/translations";
 const urbanist = Urbanist({
   subsets: ["latin"]
 });
@@ -43,13 +45,35 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+function resolveInitialLanguage(
+  savedLanguage: string | undefined,
+  acceptLanguage: string | null
+): Language {
+  if (savedLanguage === "es" || savedLanguage === "en") {
+    return savedLanguage
+  }
+
+  if (acceptLanguage?.toLowerCase().includes("es")) {
+    return "es"
+  }
+
+  return "en"
+}
+
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const cookieStore = await cookies()
+	const headerStore = await headers()
+	const initialLanguage = resolveInitialLanguage(
+		cookieStore.get("language")?.value,
+		headerStore.get("accept-language")
+	)
+
 	return (
-		<html lang="es" suppressHydrationWarning>
+		<html lang={initialLanguage} suppressHydrationWarning>
 			<body className={urbanist.className} suppressHydrationWarning>
 				<Script
 					id="theme-script"
@@ -69,8 +93,31 @@ export default function RootLayout({
           `,
 					}}
 				/>
+				<Script
+					id="language-script"
+					strategy="beforeInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+            (function() {
+              try {
+                var savedLanguage = localStorage.getItem('language');
+                var deviceLanguage = window.navigator.language ? window.navigator.language.toLowerCase() : '';
+                var language = savedLanguage === 'es' || savedLanguage === 'en'
+                  ? savedLanguage
+                  : deviceLanguage.indexOf('es') === 0
+                    ? 'es'
+                    : '${initialLanguage}';
+
+                document.documentElement.lang = language;
+              } catch (e) {
+                document.documentElement.lang = '${initialLanguage}';
+              }
+            })();
+          `,
+					}}
+				/>
 				<ThemeProvider>
-        <LanguageProvider>
+        <LanguageProvider initialLanguage={initialLanguage}>
           <LanguageScript />
           <BrandBackdrop />
           <div className="relative">
