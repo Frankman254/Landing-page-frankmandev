@@ -8,29 +8,49 @@ import { useLanguage } from "./language-provider";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const Portfolio = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const ref = useScrollReveal();
+
     return (
-        <div ref={ref} className="p-4 max-w-4xl md:py-24 mx-auto" id="portfolio">
+        <div ref={ref} className="p-4 max-w-6xl md:py-24 mx-auto" id="portfolio">
             <div className="reveal">
                 <Title title={t.portfolio.title} subtitle={t.portfolio.subtitle}/>
             </div>
-            <div className="grid md:grid-cols-3 gap-14 mt-4">
+            <div className="grid gap-8 mt-8 lg:grid-cols-2">
                 {dataPortfolio.map((data, index) => (
                     <div
                         key={data.id}
-                        className={`reveal delay-${index + 1} group rounded-2xl border border-card-border bg-card-bg p-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl`}
+                        className={`reveal delay-${index + 1} group flex h-full flex-col rounded-[1.75rem] border border-card-border bg-card-bg p-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl`}
                     >
-                        <h3 className="text-xl mb-3 font-semibold">{data.title}</h3>
-                        <div className="relative overflow-hidden rounded-2xl border border-card-border">
+                        <div className="mb-4 flex flex-wrap gap-2">
+                            <span className="rounded-full border border-brand-yellow/30 bg-brand-yellow/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-yellow">
+                                {data.status[language]}
+                            </span>
+                            <span className="rounded-full border border-card-border bg-background/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                                {data.audience[language]}
+                            </span>
+                        </div>
+                        <h3 className="text-2xl font-semibold">{data.title}</h3>
+                        <p className="mt-3 text-sm leading-7 text-text-secondary">
+                            {data.summary[language]}
+                        </p>
+                        <div className="relative mt-5 aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-card-border">
                             <Image
                                 src={data.image}
-                                alt={data.alt}
-                                width={600}
-                                height={600}
-                                className="w-full transition-transform duration-500 group-hover:scale-105"
+                                alt={data.alt[language]}
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                         </div>
+                        <ul className="mt-5 space-y-2 text-sm text-text-secondary">
+                            {data.highlights.map((highlight) => (
+                                <li key={highlight.es} className="flex gap-3">
+                                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-brand-red" />
+                                    <span>{highlight[language]}</span>
+                                </li>
+                            ))}
+                        </ul>
                         {data.tags && (
                             <div className="mt-3 flex flex-wrap gap-2">
                                 {data.tags.map((tag) => (
@@ -43,21 +63,25 @@ const Portfolio = () => {
                                 ))}
                             </div>
                         )}
-                        <div className="mt-4 flex gap-3">
+                        <div className="mt-5 flex flex-wrap gap-3">
                             <Link
                                 className={buttonVariants({ variant: "outline", size: "sm" })}
                                 href={data.urlGithub}
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 {t.portfolio.github}
                             </Link>
-                            <Link
-                                className={buttonVariants({ size: "sm" })}
-                                href={data.urlDemo}
-                                target="_blank"
-                            >
-                                {t.portfolio.liveDemo}
-                            </Link>
+                            {data.urlDemo ? (
+                                <Link
+                                    className={buttonVariants({ size: "sm" })}
+                                    href={data.urlDemo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {t.portfolio.liveDemo}
+                                </Link>
+                            ) : null}
                         </div>
                     </div>
                 ))}

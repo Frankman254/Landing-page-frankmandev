@@ -1,5 +1,5 @@
 "use client"
-import { dataAboutMe } from "@/data";
+import { dataAboutMe, dataPortfolio } from "@/data";
 import Title from "./shared/title";
 import { useLanguage } from "./language-provider";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
@@ -10,7 +10,7 @@ const AboutMe = () => {
 
     const stats = [
         { value: "2+", label: language === 'es' ? "Años de Experiencia" : "Years Experience" },
-        { value: "10+", label: language === 'es' ? "Proyectos" : "Projects" },
+        { value: String(dataPortfolio.length), label: language === 'es' ? "Proyectos destacados" : "Featured projects" },
         { value: "3", label: language === 'es' ? "Servicios" : "Services" },
     ];
 

@@ -54,7 +54,7 @@ export const translations = {
 		// Portfolio
 		portfolio: {
 			title: 'Portfolio',
-			subtitle: 'Trabajos recientes',
+			subtitle: 'Proyectos seleccionados y demos de producto',
 			github: 'Github',
 			liveDemo: 'Live Demo',
 		},
@@ -356,7 +356,7 @@ export const translations = {
 		// Portfolio
 		portfolio: {
 			title: 'Portfolio',
-			subtitle: 'Recent work',
+			subtitle: 'Selected projects and product demos',
 			github: 'Github',
 			liveDemo: 'Live Demo',
 		},
