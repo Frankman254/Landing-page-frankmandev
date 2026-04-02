@@ -182,7 +182,7 @@ export const dataPortfolio: PortfolioProject[] = [
 	{
 		id: 2,
 		title: 'FrankmanDev Playground',
-		image: '/playground.png',
+		image: '/frankmandev-playground.png',
 		urlGithub: 'https://github.com/Frankman254/frankmandevplayground',
 		urlDemo: 'https://frankmandevplayground.netlify.app/',
 		alt: {
