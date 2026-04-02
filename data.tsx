@@ -148,6 +148,7 @@ export const dataPortfolio: PortfolioProject[] = [
 			},
 		],
 		urlGithub: 'https://github.com/Frankman254/LiveWallpaperAnimeGlitch',
+		urlDemo: 'https://livewallpaperanime.netlify.app/',
 		alt: {
 			es: 'Editor visual audio-reactivo para live wallpapers y branding animado',
 			en: 'Audio-reactive visual editor for live wallpapers and animated branding',
