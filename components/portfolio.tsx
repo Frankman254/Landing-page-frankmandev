@@ -103,67 +103,86 @@ const Portfolio = () => {
                 {dataPortfolio.map((data, index) => (
                     <div
                         key={data.id}
-                        className={`reveal delay-${index + 1} group flex h-full flex-col rounded-[1.75rem] border border-card-border bg-card-bg p-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl`}
+                        className={`reveal delay-${index + 1} group flex h-full flex-col rounded-[1.75rem] border border-card-border bg-card-bg p-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
+                            index === 0 ? "lg:col-span-2 xl:grid xl:grid-cols-[1.08fr_0.92fr] xl:gap-6 xl:p-6" : ""
+                        }`}
                     >
-                        <div className="mb-4 flex flex-wrap gap-2">
-                            <span className="rounded-full border border-brand-yellow/30 bg-brand-yellow/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-yellow">
-                                {data.status[language]}
-                            </span>
-                            <span className="rounded-full border border-card-border bg-background/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                                {data.audience[language]}
-                            </span>
-                        </div>
-                        <h3 className="text-2xl font-semibold">{data.title}</h3>
-                        <p className="mt-3 text-sm leading-7 text-text-secondary">
-                            {data.summary[language]}
-                        </p>
-                        <PortfolioGallery
-                            images={
-                                data.gallery?.length
-                                    ? data.gallery
-                                    : [{ src: data.image, alt: data.alt }]
-                            }
-                            language={language}
-                        />
-                        <ul className="mt-5 space-y-2 text-sm text-text-secondary">
-                            {data.highlights.map((highlight) => (
-                                <li key={highlight.es} className="flex gap-3">
-                                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-brand-red" />
-                                    <span>{highlight[language]}</span>
-                                </li>
-                            ))}
-                        </ul>
-                        {data.tags && (
-                            <div className="mt-3 flex flex-wrap gap-2">
-                                {data.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="text-xs font-medium px-2.5 py-1 rounded-full bg-accent text-accent-foreground border border-card-border"
-                                    >
-                                        {tag}
+                        <div className={index === 0 ? "xl:order-2" : ""}>
+                            <div className="mb-4 flex flex-wrap gap-2">
+                                {index === 0 ? (
+                                    <span className="rounded-full border border-brand-red/30 bg-brand-red/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-red">
+                                        {t.portfolio.featured}
                                     </span>
-                                ))}
+                                ) : null}
+                                <span className="rounded-full border border-brand-yellow/30 bg-brand-yellow/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-yellow">
+                                    {data.status[language]}
+                                </span>
+                                <span className="rounded-full border border-card-border bg-background/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                                    {data.audience[language]}
+                                </span>
                             </div>
-                        )}
-                        <div className="mt-5 flex flex-wrap gap-3">
-                            <Link
-                                className={buttonVariants({ variant: "outline", size: "sm" })}
-                                href={data.urlGithub}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {t.portfolio.github}
-                            </Link>
-                            {data.urlDemo ? (
+                            <h3 className="text-2xl font-semibold">{data.title}</h3>
+                            <p className="mt-3 text-sm leading-7 text-text-secondary">
+                                {data.summary[language]}
+                            </p>
+                            <div className="mt-4 rounded-2xl border border-brand-yellow/20 bg-brand-yellow/10 p-4">
+                                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-yellow">
+                                    {t.portfolio.impactLabel}
+                                </p>
+                                <p className="mt-2 text-sm leading-7 text-text-secondary">
+                                    {data.impact[language]}
+                                </p>
+                            </div>
+                            <ul className="mt-5 space-y-2 text-sm text-text-secondary">
+                                {data.highlights.map((highlight) => (
+                                    <li key={highlight.es} className="flex gap-3">
+                                        <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-brand-red" />
+                                        <span>{highlight[language]}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            {data.tags && (
+                                <div className="mt-3 flex flex-wrap gap-2">
+                                    {data.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="text-xs font-medium px-2.5 py-1 rounded-full bg-accent text-accent-foreground border border-card-border"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                            <div className="mt-5 flex flex-wrap gap-3">
                                 <Link
-                                    className={buttonVariants({ size: "sm" })}
-                                    href={data.urlDemo}
+                                    className={buttonVariants({ variant: "outline", size: "sm" })}
+                                    href={data.urlGithub}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    {t.portfolio.liveDemo}
+                                    {t.portfolio.github}
                                 </Link>
-                            ) : null}
+                                {data.urlDemo ? (
+                                    <Link
+                                        className={buttonVariants({ size: "sm" })}
+                                        href={data.urlDemo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {t.portfolio.liveDemo}
+                                    </Link>
+                                ) : null}
+                            </div>
+                        </div>
+                        <div className={index === 0 ? "xl:order-1" : ""}>
+                            <PortfolioGallery
+                                images={
+                                    data.gallery?.length
+                                        ? data.gallery
+                                        : [{ src: data.image, alt: data.alt }]
+                                }
+                                language={language}
+                            />
                         </div>
                     </div>
                 ))}

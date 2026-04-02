@@ -57,6 +57,8 @@ export const translations = {
 			subtitle: 'Proyectos seleccionados y demos de producto',
 			github: 'Github',
 			liveDemo: 'Live Demo',
+			featured: 'Proyecto destacado',
+			impactLabel: 'Impacto',
 		},
 		// Contact
 		contact: {
@@ -359,6 +361,8 @@ export const translations = {
 			subtitle: 'Selected projects and product demos',
 			github: 'Github',
 			liveDemo: 'Live Demo',
+			featured: 'Featured project',
+			impactLabel: 'Impact',
 		},
 		// Contact
 		contact: {

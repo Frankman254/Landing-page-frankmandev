@@ -25,7 +25,12 @@ const Introduction = () => {
                     <p className="animate-fade-up-3 mx-auto mt-4 max-w-3xl text-sm leading-7 text-text-secondary dark:text-white/70 md:text-base">
                         {t.introduction.summary}
                     </p>
-                    <p className="animate-fade-up-3 mt-3 text-muted-foreground">{t.introduction.email}</p>
+                    <a
+                        className="animate-fade-up-3 mt-3 inline-flex text-muted-foreground transition-colors hover:text-foreground"
+                        href={`mailto:${t.introduction.email}`}
+                    >
+                        {t.introduction.email}
+                    </a>
                     <div className="animate-fade-up-4 flex items-center">
                         <div className="mx-auto mt-10 flex flex-col gap-4 md:flex-row md:justify-between">
                             <Link className={buttonVariants()} href="#contact">
@@ -33,7 +38,8 @@ const Introduction = () => {
                             </Link>
                             <Link className={buttonVariants({ variant: 'secondary'})}
                             href="/resumen-francisco-rodriguez-2025.pdf"
-                            target="_blank">
+                            download="Francisco-Rodriguez-Salazar-CV.pdf"
+                            prefetch={false}>
                                 <Paperclip className="mr-2"/> {t.introduction.downloadCV}
                             </Link>
                         </div>

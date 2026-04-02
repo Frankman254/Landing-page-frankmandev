@@ -41,6 +41,7 @@ export type PortfolioProject = {
 	urlDemo?: string;
 	alt: LocalizedCopy;
 	summary: LocalizedCopy;
+	impact: LocalizedCopy;
 	status: LocalizedCopy;
 	audience: LocalizedCopy;
 	highlights: LocalizedCopy[];
@@ -155,6 +156,10 @@ export const dataPortfolio: PortfolioProject[] = [
 			es: 'Editor de live wallpapers y visualizador musical con controles en tiempo real, branding reactivo y vista previa dedicada.',
 			en: 'Live wallpaper and music visualizer editor with real-time controls, reactive branding, and a dedicated preview mode.',
 		},
+		impact: {
+			es: 'Ideal para mostrar una experiencia visual premium y reusable para branding, streams o demos orientadas a cliente.',
+			en: 'Ideal for showcasing a premium, reusable visual experience for branding, streams, or client-facing demos.',
+		},
 		status: {
 			es: 'Producto interactivo',
 			en: 'Interactive product',
@@ -192,6 +197,10 @@ export const dataPortfolio: PortfolioProject[] = [
 		summary: {
 			es: 'Sandbox modular para validar interfaces, flujos y experimentos de producto antes de llevarlos a un entorno final.',
 			en: 'Modular sandbox for validating interfaces, flows, and product experiments before shipping them further.',
+		},
+		impact: {
+			es: 'Funciona como vitrina de exploración rápida para enseñar criterio técnico, estructura modular y velocidad de iteración.',
+			en: 'Works as a rapid exploration showcase to demonstrate technical judgment, modular structure, and iteration speed.',
 		},
 		status: {
 			es: 'Laboratorio de producto',
@@ -231,6 +240,10 @@ export const dataPortfolio: PortfolioProject[] = [
 			es: 'Demo interactiva de ajedrez para explorar jugabilidad en navegador, estado visual del tablero y experiencia de juego dentro del Playground.',
 			en: 'Interactive chess demo for exploring browser gameplay, board state visuals, and play experience inside the Playground.',
 		},
+		impact: {
+			es: 'Muestra cómo convertir una idea concreta en una demo clara, compartible y fácil de evaluar por terceros.',
+			en: 'Shows how to turn a concrete idea into a clear, shareable demo that others can evaluate quickly.',
+		},
 		status: {
 			es: 'Demo interactiva',
 			en: 'Interactive demo',
@@ -269,6 +282,10 @@ export const dataPortfolio: PortfolioProject[] = [
 			es: 'Sitio bilingue enfocado en credibilidad, narrativa profesional y una presentacion clara para clientes potenciales.',
 			en: 'Bilingual website focused on credibility, professional storytelling, and clear presentation for potential clients.',
 		},
+		impact: {
+			es: 'Refuerza posicionamiento profesional, claridad comercial y presentación de servicios para captar mejores oportunidades.',
+			en: 'Strengthens professional positioning, commercial clarity, and service presentation to attract stronger opportunities.',
+		},
 		status: {
 			es: 'Sitio de presentacion',
 			en: 'Presentation site',
@@ -306,6 +323,10 @@ export const dataPortfolio: PortfolioProject[] = [
 		summary: {
 			es: 'Aplicacion de productividad para demostrar fundamentos de producto, estructura CRUD y claridad de interfaz.',
 			en: 'Productivity app that demonstrates product fundamentals, CRUD structure, and interface clarity.',
+		},
+		impact: {
+			es: 'Sirve como muestra rápida de fundamentos frontend limpios, flujo de tareas y experiencia básica bien resuelta.',
+			en: 'Serves as a quick showcase of clean frontend fundamentals, task flow, and well-resolved baseline UX.',
 		},
 		status: {
 			es: 'Producto base',
