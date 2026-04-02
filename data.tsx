@@ -121,7 +121,6 @@ export const itemsNavbar = [
 	},
 ];
 
-
 export const dataPortfolio: PortfolioProject[] = [
 	{
 		id: 1,
@@ -233,7 +232,7 @@ export const dataPortfolio: PortfolioProject[] = [
 				es: 'Stack moderno con Next.js, TypeScript y Tailwind CSS.',
 				en: 'Modern stack powered by Next.js, TypeScript, and Tailwind CSS.',
 			},
-		},
+		],
 		tags: ['Next.js', 'TypeScript', 'Tailwind'],
 	},
 	{
