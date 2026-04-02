@@ -1,4 +1,5 @@
 "use client"
+import * as React from "react";
 import { dataPortfolio } from "@/data";
 import Title from "./shared/title";
 import Image from "next/image";
@@ -6,6 +7,88 @@ import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { useLanguage } from "./language-provider";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+    type CarouselApi,
+} from "./ui/carousel";
+
+function PortfolioGallery({
+    images,
+    language,
+}: {
+    images: Array<{ src: string; alt: { es: string; en: string } }>;
+    language: "es" | "en";
+}) {
+    const [api, setApi] = React.useState<CarouselApi>();
+    const [current, setCurrent] = React.useState(0);
+
+    React.useEffect(() => {
+        if (!api) {
+            return;
+        }
+
+        const updateCurrent = () => {
+            setCurrent(api.selectedScrollSnap());
+        };
+
+        updateCurrent();
+        api.on("select", updateCurrent);
+        api.on("reInit", updateCurrent);
+
+        return () => {
+            api.off("select", updateCurrent);
+            api.off("reInit", updateCurrent);
+        };
+    }, [api]);
+
+    return (
+        <div className="mt-5">
+            <Carousel
+                setApi={setApi}
+                opts={{ loop: images.length > 1 }}
+                className="w-full"
+            >
+                <CarouselContent className="ml-0">
+                    {images.map((item) => (
+                        <CarouselItem key={item.src} className="pl-0">
+                            <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-card-border">
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt[language]}
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    className="object-cover"
+                                />
+                            </div>
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                {images.length > 1 ? (
+                    <>
+                        <CarouselPrevious className="left-3 top-auto bottom-3 h-9 w-9 translate-y-0 border-border bg-background/85 backdrop-blur-sm" />
+                        <CarouselNext className="right-3 top-auto bottom-3 h-9 w-9 translate-y-0 border-border bg-background/85 backdrop-blur-sm" />
+                        <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center gap-2">
+                            {images.map((item, index) => (
+                                <span
+                                    key={item.src}
+                                    className={`h-2.5 rounded-full transition-all ${
+                                        current === index
+                                            ? "w-8 bg-brand-yellow"
+                                            : "w-2.5 bg-white/55"
+                                    }`}
+                                />
+                            ))}
+                        </div>
+                    </>
+                ) : null}
+            </Carousel>
+        </div>
+    );
+}
 
 const Portfolio = () => {
     const { t, language } = useLanguage();
@@ -34,15 +117,14 @@ const Portfolio = () => {
                         <p className="mt-3 text-sm leading-7 text-text-secondary">
                             {data.summary[language]}
                         </p>
-                        <div className="relative mt-5 aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-card-border">
-                            <Image
-                                src={data.image}
-                                alt={data.alt[language]}
-                                fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                        </div>
+                        <PortfolioGallery
+                            images={
+                                data.gallery?.length
+                                    ? data.gallery
+                                    : [{ src: data.image, alt: data.alt }]
+                            }
+                            language={language}
+                        />
                         <ul className="mt-5 space-y-2 text-sm text-text-secondary">
                             {data.highlights.map((highlight) => (
                                 <li key={highlight.es} className="flex gap-3">

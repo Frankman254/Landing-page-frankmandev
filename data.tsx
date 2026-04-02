@@ -33,6 +33,10 @@ export type PortfolioProject = {
 	id: number;
 	title: string;
 	image: string;
+	gallery?: Array<{
+		src: string;
+		alt: LocalizedCopy;
+	}>;
 	urlGithub: string;
 	urlDemo?: string;
 	alt: LocalizedCopy;
@@ -125,7 +129,23 @@ export const dataPortfolio: PortfolioProject[] = [
 	{
 		id: 1,
 		title: 'LiveWallpaper Anime Glitch',
-		image: '/live-wallpaper-anime-glitch.svg',
+		image: '/live-wallpaper-anime-editor.png',
+		gallery: [
+			{
+				src: '/live-wallpaper-anime-editor.png',
+				alt: {
+					es: 'Panel editor de LiveWallpaper Anime Glitch con controles y capas',
+					en: 'LiveWallpaper Anime Glitch editor panel with controls and layers',
+				},
+			},
+			{
+				src: '/live-wallpaper-anime-view.png',
+				alt: {
+					es: 'Vista previa inmersiva de LiveWallpaper Anime Glitch en pantalla completa',
+					en: 'Immersive full-screen preview of LiveWallpaper Anime Glitch',
+				},
+			},
+		],
 		urlGithub: 'https://github.com/Frankman254/LiveWallpaperAnimeGlitch',
 		alt: {
 			es: 'Editor visual audio-reactivo para live wallpapers y branding animado',
@@ -199,6 +219,44 @@ export const dataPortfolio: PortfolioProject[] = [
 	},
 	{
 		id: 3,
+		title: 'Chess Experience',
+		image: '/chess-proyect.png',
+		urlGithub: 'https://github.com/Frankman254/frankmandevplayground',
+		urlDemo: 'https://frankmandevplayground.netlify.app/games/chess',
+		alt: {
+			es: 'Modulo de ajedrez interactivo dentro de FrankmanDev Playground',
+			en: 'Interactive chess module inside FrankmanDev Playground',
+		},
+		summary: {
+			es: 'Demo interactiva de ajedrez para explorar jugabilidad en navegador, estado visual del tablero y experiencia de juego dentro del Playground.',
+			en: 'Interactive chess demo for exploring browser gameplay, board state visuals, and play experience inside the Playground.',
+		},
+		status: {
+			es: 'Demo interactiva',
+			en: 'Interactive demo',
+		},
+		audience: {
+			es: 'Juego web',
+			en: 'Web game',
+		},
+		highlights: [
+			{
+				es: 'Ruta dedicada dentro del Playground para mostrar una experiencia completa y enfocada.',
+				en: 'Dedicated route inside the Playground to showcase a focused, complete experience.',
+			},
+			{
+				es: 'Tablero visual con interaccion directa pensado para pruebas de UX y logica de juego.',
+				en: 'Visual board with direct interaction designed for UX testing and gameplay logic exploration.',
+			},
+			{
+				es: 'Buen ejemplo de como convertir un modulo experimental en una demo lista para compartir.',
+				en: 'Strong example of turning an experimental module into a shareable product demo.',
+			},
+		],
+		tags: ['Next.js', 'TypeScript', 'Game UI', 'Interactive Demo'],
+	},
+	{
+		id: 4,
 		title: 'Landing Page Portfolio',
 		image: '/landing-portfolio.png',
 		urlGithub: 'https://github.com/Frankman254/Landing-page-frankmandev',
@@ -236,7 +294,7 @@ export const dataPortfolio: PortfolioProject[] = [
 		tags: ['Next.js', 'TypeScript', 'Tailwind'],
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'App Todos React',
 		image: '/app-todos.png',
 		urlGithub: 'https://github.com/Frankman254/app-todos',
