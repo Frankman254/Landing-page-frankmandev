@@ -258,7 +258,7 @@ export const dataPortfolio: PortfolioProject[] = [
 	{
 		id: 4,
 		title: 'Landing Page Portfolio',
-		image: '/landing-portfolio.png',
+		image: '/landing-page.png',
 		urlGithub: 'https://github.com/Frankman254/Landing-page-frankmandev',
 		urlDemo: 'https://landing-page-frankmandev.netlify.app/#home',
 		alt: {
