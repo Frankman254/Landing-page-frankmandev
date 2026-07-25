@@ -23,7 +23,7 @@ const Contact = () => {
                             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent text-brand-red">
                                 {data.icon}
                             </div>
-                            <p className="mt-3 font-semibold">{t.data.contact[index].title}</p>
+                            <p className="mt-3 font-semibold">{t.contact.items[index].title}</p>
                             <p className="text-muted-foreground">{data.subtitle}</p>
                             <Link href={data.link} target="_blank" className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-red hover:text-primary transition-colors duration-200">
                                 {t.contact.sendMessage}

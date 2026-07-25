@@ -23,7 +23,7 @@ const BrandBackdrop = () => {
           Frankman Dev
         </div>
         <div className="hidden text-[10px] font-semibold uppercase tracking-[0.42em] lg:block lg:text-xs">
-          Editorial Personal Brand
+          Systems Engineering
         </div>
       </div>
 

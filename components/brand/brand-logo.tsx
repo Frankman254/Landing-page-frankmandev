@@ -51,7 +51,7 @@ const BrandLogo = ({
 					<span
 						className={`mt-3 text-[11px] uppercase tracking-[0.36em] ${mutedColor}`}
 					>
-						Full-Stack Software Developer
+						Systems Engineer
 					</span>
 				) : null}
 			</div>

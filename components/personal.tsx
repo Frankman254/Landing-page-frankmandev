@@ -19,7 +19,7 @@ const Personal = () => {
                 className="w-full max-w-6xl h-fit mx-auto"
             >
                 <CarouselContent className="-mt-1">
-                    {t.data.personal.images.map((image, index) => (
+                    {t.personal.images.map((image, index) => (
                         <CarouselItem key={index} className="basis-full">
                             <div className="flex flex-col items-center justify-center p-4">
                                 <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-lg overflow-hidden mb-6 shadow-2xl">

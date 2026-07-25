@@ -16,9 +16,21 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://landing-page-frankmandev.netlify.app"),
-  title: "Francisco Rodriguez Salazar | Frankman Dev",
+  title: "Francisco Rodriguez | Systems Engineer — Software, Data & Infrastructure",
   description:
-    "Full-Stack Software Developer focused on internal tools, process automation, web infrastructure, and production-ready systems.",
+    "Systems Engineer specializing in full-stack software development, SQL Server, infrastructure and production systems, with end-to-end ownership of production applications.",
+  keywords: [
+    "Systems Engineer",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "SQL Server",
+    "Backend Engineer",
+    "Infrastructure",
+    "Production Systems",
+    "Next.js",
+    "Node.js",
+    "Francisco Rodriguez Salazar",
+  ],
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -32,16 +44,16 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Francisco Rodriguez Salazar | Frankman Dev",
+    title: "Francisco Rodriguez | Systems Engineer — Software, Data & Infrastructure",
     description:
-      "Full-Stack Software Developer focused on internal tools, process automation, web infrastructure, and production-ready systems.",
+      "Systems Engineer specializing in full-stack software development, SQL Server, infrastructure and production systems.",
     images: ["/brand-banner.svg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Francisco Rodriguez Salazar | Frankman Dev",
+    title: "Francisco Rodriguez | Systems Engineer — Software, Data & Infrastructure",
     description:
-      "Full-Stack Software Developer focused on internal tools, process automation, web infrastructure, and production-ready systems.",
+      "Systems Engineer specializing in full-stack software development, SQL Server, infrastructure and production systems.",
     images: ["/brand-banner.svg"],
   },
 };

@@ -1,26 +1,12 @@
 import {
-	BellPlus,
-	BookText,
 	Briefcase,
-	MessageSquareMore,
-	Brush,
 	Code2,
 	CodeSquare,
 	Home,
 	Inbox,
-	Heart,
+	Layers,
 	Mail,
-	SquareDashedBottomCode,
-	PanelsTopLeft,
-	Rocket,
 	Phone,
-	UserRound,
-	Wrench,
-	Server,
-	Monitor,
-	Database,
-	Settings,
-	GraduationCap,
 	Linkedin,
 } from 'lucide-react';
 
@@ -48,51 +34,6 @@ export type PortfolioProject = {
 	tags: string[];
 };
 
-export const dataAboutMe = [
-	{
-		id: 1,
-		name: 'Producción',
-		icon: <Server />,
-		description:
-			'Experiencia trabajando con sistemas web reales en entornos institucionales de producción.',
-	},
-	{
-		id: 2,
-		name: 'Frontend',
-		icon: <Monitor />,
-		description:
-			'React, Next.js y desarrollo de interfaces modernas enfocadas en experiencia de usuario.',
-	},
-	{
-		id: 3,
-		name: 'Backend & Datos',
-		icon: <Database />,
-		description:
-			'Node.js, Express y SQL Server con trabajo directo sobre bases de datos.',
-	},
-	{
-		id: 4,
-		name: 'Infraestructura',
-		icon: <Settings />,
-		description:
-			'Despliegues, gestión de logs y soporte en servidores Linux.',
-	},
-	{
-		id: 5,
-		name: 'Aprendizaje',
-		icon: <GraduationCap />,
-		description:
-			'Mejora continua, estudio de nuevas tecnologías y buenas prácticas.',
-	},
-	{
-		id: 6,
-		name: 'Valores',
-		icon: <Heart />,
-		description:
-			'Compromiso, responsabilidad y enfoque en soluciones sostenibles.',
-	},
-];
-
 export const itemsNavbar = [
 	{
 		id: 1,
@@ -102,19 +43,19 @@ export const itemsNavbar = [
 	},
 	{
 		id: 2,
-		title: 'User',
-		icon: <UserRound size={20} />,
-		link: '#about-me',
+		title: 'Expertise',
+		icon: <Layers size={20} />,
+		link: '#expertise',
 	},
 	{
 		id: 3,
-		title: 'Book',
-		icon: <BookText size={20} />,
-		link: '#services',
+		title: 'Experience',
+		icon: <Briefcase size={20} />,
+		link: '#experience',
 	},
 	{
 		id: 4,
-		title: 'Target',
+		title: 'Portfolio',
 		icon: <CodeSquare size={20} />,
 		link: '#portfolio',
 	},
@@ -352,84 +293,6 @@ export const dataPortfolio: PortfolioProject[] = [
 			},
 		],
 		tags: ['React', 'JavaScript', 'CSS'],
-	},
-];
-
-export const dataServices = [
-	{
-		id: 1,
-		title: 'Desarrollo Web',
-		icon: <PanelsTopLeft />,
-		features: [
-			{
-				name: 'Desarrollo de sitios web personalizados',
-			},
-			{
-				name: 'Diseño y desarrollo responsive',
-			},
-			{
-				name: 'Optimización SEO',
-			},
-			{
-				name: 'Desarrollo de aplicaciones web',
-			},
-			{
-				name: 'Gestión de contenido',
-			},
-			{
-				name: 'Comercio electrónico',
-			},
-			{
-				name: 'Mantenimiento y soporte continuo',
-			},
-		],
-	},
-	{
-		id: 2,
-		title: 'Servicios Técnicos',
-		icon: <BellPlus />,
-		features: [
-			{
-				name: 'Reparacion de Computadoras',
-			},
-			{
-				name: 'Instalacion de Sistemas de Seguridad',
-			},
-			{
-				name: 'Instalacion de Sistemas Operativos',
-			},
-			{
-				name: 'Reparacion de Celulares / Consolas de Video juegos',
-			},
-			{
-				name: 'Mantenimiento de Computadoras, Consolas, Celulares',
-			},
-		],
-	},
-	{
-		id: 3,
-		title: 'UI/UX Design',
-		icon: <Brush />,
-		features: [
-			{
-				name: 'Diseño intuitivo para una experiencia de usuario fluida',
-			},
-			{
-				name: 'Prototipado interactivo para visualizar la interfaz',
-			},
-			{
-				name: 'Investigación de usuarios para comprender necesidades y expectativas',
-			},
-			{
-				name: 'Optimización de la usabilidad para mejorar la accesibilidad',
-			},
-			{
-				name: 'Pruebas de usabilidad para evaluar la experiencia',
-			},
-			{
-				name: 'Diseño responsive para adaptarse a diferentes dispositivos',
-			},
-		],
 	},
 ];
 

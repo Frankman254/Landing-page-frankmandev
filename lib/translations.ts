@@ -2,70 +2,295 @@ export type Language = 'es' | 'en';
 
 export const translations = {
 	es: {
-		// Introduction
+		// Introduction / Hero
 		introduction: {
-			greeting: 'Hola, soy Francisco Rodriguez Salazar',
+			greeting: 'Francisco Rodriguez Salazar',
 			name: 'Frankman Dev',
-			role: 'Desarrollador de Software Full-Stack',
+			role: 'Ingeniero en Sistemas',
+			specialization: 'Software · Datos · Infraestructura',
 			summary:
-				'Desarrollo herramientas internas, automatizacion de procesos y aplicaciones web listas para produccion en entornos privados y gubernamentales.',
+				'Construyo, despliego y mantengo sistemas en producción de extremo a extremo: desde el código de la aplicación y las APIs REST hasta SQL Server, los servidores y la infraestructura.',
 			brandCard:
-				'Software, automatizacion e infraestructura para operaciones reales.',
-			backdropKicker: 'Software, procesos e infraestructura',
-			backdropHeadline: 'Soluciones que optimizan operaciones reales.',
+				'Responsabilidad end-to-end sobre sistemas en producción: software, datos e infraestructura.',
+			backdropKicker: 'Software · Datos · Infraestructura',
+			backdropHeadline: 'Sistemas en producción, de extremo a extremo.',
 			email: 'frankman254@gmail.com',
 			phone: '+507 6075-8976',
-			contactButton: 'Hablemos de tu proyecto',
+			primaryCta: 'Ver experiencia',
+			contactButton: 'Contáctame',
 			downloadCV: 'Descargar CV',
+			githubLabel: 'GitHub',
+			linkedinLabel: 'LinkedIn',
+		},
+		// Core Expertise
+		expertise: {
+			title: 'Core Expertise',
+			subtitle: 'En qué trabajo, de extremo a extremo',
+			domains: [
+				{
+					name: 'Software Engineering',
+					description:
+						'Aplicaciones web y sistemas institucionales construidos desde cero y mantenidos en operación real, con APIs REST y lógica de negocio.',
+					items: [
+						'Next.js',
+						'React',
+						'Node.js',
+						'Express',
+						'REST APIs',
+						'JavaScript',
+						'Python',
+					],
+				},
+				{
+					name: 'Data & SQL Server',
+					description:
+						'Trabajo directo con Microsoft SQL Server en producción: optimización de consultas y stored procedures, validación y limpieza de datos, y análisis de rendimiento.',
+					items: [
+						'Microsoft SQL Server',
+						'Query Optimization',
+						'Stored Procedures',
+						'Data Validation',
+						'Data Cleanup',
+						'Performance Analysis',
+						'Backup / Restore',
+					],
+				},
+				{
+					name: 'Infrastructure & Production',
+					description:
+						'Publicación y operación de aplicaciones desde el código hasta HTTPS público: servidores, IIS, reverse proxy y certificados.',
+					items: [
+						'Linux Server',
+						'Windows Server',
+						'IIS',
+						'Reverse Proxy',
+						'SSL / HTTPS',
+						'Production Deployments',
+						'Monitoring',
+					],
+				},
+				{
+					name: 'Systems & Troubleshooting',
+					description:
+						'Diagnóstico de problemas de producción a través de toda la pila, desde la capa de aplicación hasta la base de datos y el servidor.',
+					items: [
+						'Production Support',
+						'Performance Diagnosis',
+						'Application Monitoring',
+						'Incident Analysis',
+						'End-to-End Troubleshooting',
+					],
+				},
+			],
+		},
+		// End-to-End System Ownership
+		ownership: {
+			title: 'System Ownership',
+			subtitle: 'Un sistema, todas las capas',
+			intro:
+				'No me detengo en la capa de aplicación. Puedo intervenir en toda la cadena técnica de un sistema y, cuando algo falla o va lento, rastrear el problema hasta la capa donde realmente vive.',
+			steps: [
+				{ name: 'Frontend', detail: 'React / Next.js' },
+				{ name: 'Backend / API', detail: 'Node.js · Express · REST' },
+				{ name: 'SQL Server', detail: 'Queries · Stored Procedures' },
+				{ name: 'Infraestructura', detail: 'IIS · Reverse Proxy · SSL' },
+				{ name: 'Producción', detail: 'Despliegue · Monitoreo' },
+			],
+			closing:
+				'Si una aplicación se vuelve lenta, puedo investigar si el cuello de botella está en React, la API, la lógica de negocio, una consulta SQL, un stored procedure, los índices, la concurrencia o la configuración del servidor, y trabajar sobre la capa correcta.',
+		},
+		// Professional Experience
+		experience: {
+			title: 'Experiencia',
+			subtitle: 'Experiencia profesional',
+			present: 'Actualidad',
+			roles: [
+				{
+					role: 'Desarrollador Web Full-Stack / Analista de Sistemas',
+					company: 'INADEH',
+					period: 'Feb 2025 – Actualidad',
+					location: 'Panamá',
+					summary:
+						'Responsabilidad end-to-end sobre aplicaciones web institucionales: desde el código y las APIs hasta SQL Server, los servidores y la producción.',
+					responsibilities: [
+						'Desarrollo y mantenimiento de aplicaciones web institucionales usadas en operaciones reales.',
+						'Desarrollo backend e integración de APIs REST.',
+						'Integración con SQL Server y gestión de datos de sistemas internos.',
+						'Optimización de consultas y stored procedures.',
+						'Validación, limpieza y corrección de registros inconsistentes.',
+						'Despliegues en producción desde el código hasta HTTPS público.',
+						'Administración de servidores Linux y Windows Server, y configuración de IIS.',
+						'Configuración de reverse proxy y certificados SSL.',
+						'Monitoreo de aplicaciones, revisión de logs y troubleshooting en producción.',
+						'Documentación técnica y responsabilidad end-to-end de las aplicaciones.',
+					],
+				},
+			],
+		},
+		// Production Case Study
+		caseStudy: {
+			title: 'Case Study',
+			subtitle: 'SQL Server Performance Investigation',
+			badge: 'Producción · Anonimizado',
+			contextTitle: 'Contexto',
+			context:
+				'Un sistema institucional en producción presentaba tiempos de respuesta degradados bajo carga concurrente. El objetivo era localizar el origen real de la lentitud en lugar de tratar los síntomas.',
+			investigationTitle: 'Investigación',
+			investigation: [
+				'Identificación y análisis de consultas SQL costosas.',
+				'Revisión de tiempo de ejecución y logical reads.',
+				'Análisis de sesiones activas y solicitudes concurrentes.',
+				'Investigación de blocking y wait types.',
+				'Evaluación del uso de CPU y memoria.',
+				'Revisión de la carga general de la base de datos.',
+				'Evaluación de la configuración de paralelismo (MAXDOP).',
+				'Identificación de oportunidades de optimización de consultas e índices.',
+				'Determinación de si el cuello de botella se originaba en el código de la aplicación, los servicios backend o la capa de base de datos.',
+			],
+			approachTitle: 'Enfoque',
+			approach:
+				'El trabajo se centró en un diagnóstico metódico y basado en evidencia a través de toda la pila: medir antes de cambiar y aislar la capa responsable antes de optimizarla.',
+			techTitle: 'Tecnologías',
+			tech: [
+				'Microsoft SQL Server',
+				'SQL',
+				'Node.js',
+				'Windows Server',
+				'Production Systems',
+			],
+			disclaimer:
+				'Caso anonimizado. No se muestran nombres de servidores, credenciales, nombres de bases de datos o tablas internas, consultas privadas ni datos institucionales: el objetivo es mostrar la metodología, no la infraestructura.',
+		},
+		// Technical Stack
+		techStack: {
+			title: 'Technical Stack',
+			subtitle: 'Herramientas agrupadas por dominio',
+			groups: [
+				{
+					title: 'Software',
+					items: [
+						'Next.js',
+						'React',
+						'Node.js',
+						'Express',
+						'JavaScript',
+						'Python',
+					],
+				},
+				{
+					title: 'Data',
+					items: ['Microsoft SQL Server', 'SQL', 'Stored Procedures'],
+				},
+				{
+					title: 'Infraestructura',
+					items: [
+						'Linux',
+						'Windows Server',
+						'IIS',
+						'Reverse Proxy',
+						'SSL / HTTPS',
+					],
+				},
+				{
+					title: 'Engineering',
+					items: [
+						'Git',
+						'GitHub',
+						'REST APIs',
+						'Monitoring',
+						'Technical Documentation',
+					],
+				},
+			],
+		},
+		// Portfolio
+		portfolio: {
+			title: 'Proyectos',
+			subtitle: 'Proyectos de ingeniería seleccionados',
+			github: 'Github',
+			liveDemo: 'Live Demo',
+			featured: 'Proyecto destacado',
+			impactLabel: 'Enfoque técnico',
 		},
 		// About Me
 		aboutMe: {
-			title: 'Perfil',
-			subtitle: 'Como trabajo',
+			title: 'About',
+			subtitle: 'Cómo entiendo los sistemas',
 			description:
-				'Desarrollador de Software Full-Stack con 2 años de experiencia construyendo, manteniendo y mejorando sistemas utilizados en organizaciones privadas y entidades gubernamentales. Diseño herramientas internas, automatizo procesos y despliego aplicaciones web conectando frontend, backend, bases de datos e infraestructura. Mi enfoque es practico: soluciones claras, mantenibles y listas para produccion.',
-			contactButton: 'Contáctame',
-		},
-		// Skills
-		skills: {
-			title: 'Habilidades',
-			subtitle: 'Habilidades que tengo',
-		},
-		// Services
-		services: {
-			title: 'Servicios',
-			subtitle: 'Soluciones que ofrezco',
-		},
-		// Experience
-		experience: {
-			title: 'Experiencia',
-			subtitle: 'Experiencia en produccion',
-		},
-		skillLevels: {
-			basic: 'Básico',
-			intermediate: 'Intermedio',
-			experienced: 'Experimentado',
+				'Soy Ingeniero en Sistemas y disfruto entender los sistemas más allá de la capa de aplicación. Mi trabajo abarca desarrollo de software, bases de datos, infraestructura y producción, y me gusta poder seguir un problema hasta donde realmente vive, a través de toda la pila. Soy analítico, autodidacta y orientado a resolver problemas, con foco en construir sistemas mantenibles que sigan funcionando en producción.',
+			stats: [
+				'Años en producción',
+				'Dominios de ingeniería',
+				'Proyectos seleccionados',
+			],
 		},
 		// Personal
 		personal: {
 			title: 'Personal',
 			subtitle: 'Más allá del código',
-		},
-		// Portfolio
-		portfolio: {
-			title: 'Portfolio',
-			subtitle: 'Proyectos seleccionados y demos de producto',
-			github: 'Github',
-			liveDemo: 'Live Demo',
-			featured: 'Proyecto destacado',
-			impactLabel: 'Impacto',
+			images: [
+				{
+					url: '/slider-1.jpg',
+					alt: 'Tecnología en contexto real',
+					caption:
+						'Trabajo diario con sistemas reales y entornos de producción.',
+				},
+				{
+					url: '/slider-2.jpg',
+					alt: 'Eventos y comunidad tecnológica',
+					caption:
+						'Aprender y compartir conocimiento es parte de mi crecimiento profesional.',
+				},
+				{
+					url: '/slider-3.jpg',
+					alt: 'Aprendizaje y disciplina',
+					caption:
+						'El aprendizaje constante es parte de mi rutina como ingeniero.',
+				},
+				{
+					url: '/slider-4.jpg',
+					alt: 'Equilibrio mente-cuerpo',
+					caption:
+						'Mantener equilibrio físico y mental me permite rendir mejor profesionalmente.',
+				},
+				{
+					url: '/slider-5.jpg',
+					alt: 'Profesionalidad y presencia',
+					caption:
+						'Profesionalismo y responsabilidad en cada proyecto que asumo.',
+				},
+				{
+					url: '/slider-6.jpg',
+					alt: 'Proyectos y logros',
+					caption:
+						'Enfocado en construir y mejorar soluciones que impactan entornos reales.',
+				},
+				{
+					url: '/slider-7.jpg',
+					alt: 'Identidad personal',
+					caption:
+						'Más allá del código, disfruto aprender y crecer como persona.',
+				},
+				{
+					url: '/slider-8.jpg',
+					alt: 'Tecnología y creatividad',
+					caption:
+						'Disfruto analizar, planificar y transformar ideas en soluciones técnicas.',
+				},
+			],
 		},
 		// Contact
 		contact: {
 			title: 'Contacta conmigo',
 			subtitle:
-				'Conversemos sobre tu sistema, automatizacion o sitio web.',
-			sendMessage: 'Enviar Mensaje',
+				'Conversemos sobre un sistema, una base de datos o una oportunidad.',
+			sendMessage: 'Abrir',
+			items: [
+				{ title: 'LinkedIn' },
+				{ title: 'Github' },
+				{ title: 'Email' },
+				{ title: 'Teléfono' },
+			],
 		},
 		// Contact Form
 		contactForm: {
@@ -79,296 +304,312 @@ export const translations = {
 		},
 		// Footer
 		footer: {
-			aboutMe: 'Sobre mi',
-			skills: 'Skills',
-			services: 'Servicios',
-			portfolio: 'Portfolio',
+			expertise: 'Expertise',
+			experience: 'Experiencia',
+			portfolio: 'Proyectos',
+			about: 'About',
 			contact: 'Contacto',
 			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez Salazar',
 		},
 		// Navbar
 		navbar: {
 			home: 'Home',
-			user: 'User',
-			book: 'Book',
-			target: 'Target',
+			expertise: 'Expertise',
+			experience: 'Experience',
+			portfolio: 'Portfolio',
 			contact: 'Contact',
-		},
-		// Data
-		data: {
-			aboutMe: [
-				{
-					name: 'Producción',
-					description:
-						'Experiencia en sistemas reales usados por equipos internos en entornos privados y gubernamentales.',
-				},
-				{
-					name: 'Frontend',
-					description:
-						'Interfaces modernas con React y Next.js enfocadas en claridad, velocidad y mantenimiento.',
-				},
-				{
-					name: 'Backend & Datos',
-					description:
-						'APIs, lógica de negocio y SQL Server para procesos internos, validación y trazabilidad.',
-				},
-				{
-					name: 'Infraestructura',
-					description:
-						'Despliegues en Linux y Windows Server, IIS, Nginx, SSL y soporte en produccion.',
-				},
-				{
-					name: 'Aprendizaje',
-					description:
-						'Actualizacion continua en arquitectura, automatizacion y buenas practicas para construir soluciones robustas.',
-				},
-				{
-					name: 'Valores',
-					description:
-						'Comunicacion clara, responsabilidad tecnica y foco en resultados utiles para el negocio.',
-				},
-			],
-			skills: [
-				{
-					title: 'Frontend',
-					items: [
-						'JavaScript / TypeScript',
-						'React',
-						'Next.js',
-						'Tailwind CSS',
-						'shadcn/ui',
-						'HTML5 / CSS3',
-					],
-				},
-				{
-					title: 'Backend',
-					items: [
-						'Node.js',
-						'Express.js',
-						'SQL Server',
-						'APIs REST',
-						'Arquitectura por controladores',
-						'Integracion de sistemas',
-					],
-				},
-				{
-					title: 'Infraestructura / Producción',
-					items: [
-						'Linux (servidores)',
-						'Windows Server',
-						'IIS / Nginx',
-						'SSL / DNS / reverse proxy',
-						'Despliegues y soporte en produccion',
-					],
-				},
-				{
-					title: 'Buenas Prácticas',
-					items: [
-						'MVP funcional',
-						'Arquitectura modular',
-						'Automatizacion de procesos',
-						'Documentacion y resolucion de incidencias',
-					],
-				},
-			],
-			services: [
-				{
-					title: 'Herramientas internas y automatizacion',
-					features: [
-						'Paneles y sistemas administrativos',
-						'Automatizacion de tareas y flujos repetitivos',
-						'Formularios, dashboards y reportes',
-						'Integracion con bases de datos y procesos existentes',
-						'Migracion de herramientas de escritorio a web',
-						'Mejora de procesos operativos',
-						'Soporte evolutivo y mantenimiento',
-					],
-				},
-				{
-					title: 'Aplicaciones web a medida',
-					features: [
-						'Sitios y aplicaciones web para empresas y profesionales',
-						'Frontend con React y Next.js',
-						'Backend con APIs y lógica de negocio',
-						'Arquitectura modular y escalable',
-						'Optimizacion de rendimiento y mantenibilidad',
-						'Integracion con servicios y sistemas existentes',
-					],
-				},
-				{
-					title: 'Infraestructura y despliegue',
-					features: [
-						'Configuracion de Linux y Windows Server',
-						'IIS, Nginx, SSL, DNS y proxies inversos',
-						'Publicacion de aplicaciones Node.js',
-						'Resolucion de incidencias 403 / 502 y conectividad',
-						'Monitoreo basico, logs y soporte operativo',
-						'Mantenimiento de entornos productivos',
-					],
-				},
-			],
-			experience: [
-				{
-					title: 'Experience',
-					descriptions: [
-						'2 años de experiencia en entornos privados y gubernamentales.',
-						'Desarrollo y mantenimiento de sistemas web usados en operaciones reales.',
-						'Diseño de herramientas internas para reducir tareas manuales y mejorar procesos.',
-						'Trabajo con SQL Server, APIs, frontend moderno e integracion de sistemas.',
-						'Despliegue y soporte sobre Linux, Windows Server, IIS, Nginx, SSL y proxies inversos.',
-						'Resolución de incidencias técnicas en producción con enfoque en continuidad operativa.',
-					],
-				},
-			],
-			skillProficiency: [
-				{
-					title: 'Desarrollo Frontend 💄',
-					skills: [
-						{ name: 'HTML', level: 'experienced' as const },
-						{ name: 'CSS', level: 'experienced' as const },
-						{ name: 'JavaScript', level: 'intermediate' as const },
-						{ name: 'Tailwind CSS', level: 'experienced' as const },
-						{ name: 'React', level: 'experienced' as const },
-					],
-				},
-				{
-					title: 'Desarrollo Backend 🥷',
-					skills: [
-						{ name: 'Node.js', level: 'intermediate' as const },
-						{ name: 'Python', level: 'intermediate' as const },
-						{ name: 'SQL Server', level: 'intermediate' as const },
-						{ name: 'Next.js', level: 'experienced' as const },
-						{ name: 'Express', level: 'intermediate' as const },
-					],
-				},
-			],
-			// Personal
-			personal: {
-				title: 'Personal',
-				subtitle: 'Más allá del código',
-				images: [
-					{
-						url: '/slider-1.jpg',
-						alt: 'Tecnología en contexto real',
-						caption:
-							'Trabajo diario con sistemas reales y entornos de producción.',
-					},
-					{
-						url: '/slider-2.jpg',
-						alt: 'Eventos y comunidad tecnológica',
-						caption:
-							'Aprender y compartir conocimiento es parte de mi crecimiento profesional.',
-					},
-					{
-						url: '/slider-3.jpg',
-						alt: 'Aprendizaje y disciplina',
-						caption:
-							'El aprendizaje constante es parte de mi rutina como desarrollador.',
-					},
-					{
-						url: '/slider-4.jpg',
-						alt: 'Equilibrio mente-cuerpo',
-						caption:
-							'Mantener equilibrio físico y mental me permite rendir mejor profesionalmente.',
-					},
-					{
-						url: '/slider-5.jpg',
-						alt: 'Profesionalidad y presencia',
-						caption:
-							'Profesionalismo y responsabilidad en cada proyecto que asumo.',
-					},
-					{
-						url: '/slider-6.jpg',
-						alt: 'Proyectos y logros',
-						caption:
-							'Enfocado en construir y mejorar soluciones que impactan entornos reales.',
-					},
-					{
-						url: '/slider-7.jpg',
-						alt: 'Identidad personal',
-						caption:
-							'Más allá del código, disfruto aprender y crecer como persona.',
-					},
-					{
-						url: '/slider-8.jpg',
-						alt: 'Tecnología y creatividad',
-						caption:
-							'Disfruto analizar, planificar y transformar ideas en soluciones técnicas.',
-					},
-				],
-			},
-			contact: [
-				{ title: 'LinkedIn' },
-				{ title: 'Github' },
-				{ title: 'Email' },
-				{ title: 'Teléfono' },
-			],
 		},
 	},
 	en: {
-		// Introduction
+		// Introduction / Hero
 		introduction: {
-			greeting: 'Hello, I am Francisco Rodriguez Salazar',
+			greeting: 'Francisco Rodriguez Salazar',
 			name: 'Frankman Dev',
-			role: 'Full-Stack Software Developer',
+			role: 'Systems Engineer',
+			specialization: 'Software · Data · Infrastructure',
 			summary:
-				'I build internal tools, process automation, and production-ready web applications for private and government environments.',
+				'I build, deploy and maintain production systems end-to-end — from application code and REST APIs to SQL Server, servers and infrastructure.',
 			brandCard:
-				'Software, automation, and infrastructure for real operational workflows.',
-			backdropKicker: 'Software, processes, and infrastructure',
-			backdropHeadline: 'Solutions that improve real operations.',
+				'End-to-end ownership of production systems — software, data and infrastructure.',
+			backdropKicker: 'Software · Data · Infrastructure',
+			backdropHeadline: 'Production systems, owned end to end.',
 			email: 'frankman254@gmail.com',
 			phone: '+507 6075-8976',
-			contactButton: 'Let’s talk about your project',
+			primaryCta: 'View Experience',
+			contactButton: 'Contact Me',
 			downloadCV: 'Download CV',
+			githubLabel: 'GitHub',
+			linkedinLabel: 'LinkedIn',
+		},
+		// Core Expertise
+		expertise: {
+			title: 'Core Expertise',
+			subtitle: 'What I work with, end to end',
+			domains: [
+				{
+					name: 'Software Engineering',
+					description:
+						'Web applications and institutional systems built from scratch and maintained in real operation, with REST APIs and business logic.',
+					items: [
+						'Next.js',
+						'React',
+						'Node.js',
+						'Express',
+						'REST APIs',
+						'JavaScript',
+						'Python',
+					],
+				},
+				{
+					name: 'Data & SQL Server',
+					description:
+						'Hands-on work with Microsoft SQL Server in production: query and stored procedure optimization, data validation and cleanup, and performance analysis.',
+					items: [
+						'Microsoft SQL Server',
+						'Query Optimization',
+						'Stored Procedures',
+						'Data Validation',
+						'Data Cleanup',
+						'Performance Analysis',
+						'Backup / Restore',
+					],
+				},
+				{
+					name: 'Infrastructure & Production',
+					description:
+						'Publishing and running applications from code to public HTTPS: servers, IIS, reverse proxies and certificates.',
+					items: [
+						'Linux Server',
+						'Windows Server',
+						'IIS',
+						'Reverse Proxy',
+						'SSL / HTTPS',
+						'Production Deployments',
+						'Monitoring',
+					],
+				},
+				{
+					name: 'Systems & Troubleshooting',
+					description:
+						'Diagnosing production issues across the whole stack, from the application layer down to the database and the server.',
+					items: [
+						'Production Support',
+						'Performance Diagnosis',
+						'Application Monitoring',
+						'Incident Analysis',
+						'End-to-End Troubleshooting',
+					],
+				},
+			],
+		},
+		// End-to-End System Ownership
+		ownership: {
+			title: 'System Ownership',
+			subtitle: 'One system, every layer',
+			intro:
+				"I don't stop at the application layer. I can work across the full technical chain of a system and, when something breaks or slows down, trace the problem to the layer where it actually lives.",
+			steps: [
+				{ name: 'Frontend', detail: 'React / Next.js' },
+				{ name: 'Backend / API', detail: 'Node.js · Express · REST' },
+				{ name: 'SQL Server', detail: 'Queries · Stored Procedures' },
+				{ name: 'Infrastructure', detail: 'IIS · Reverse Proxy · SSL' },
+				{ name: 'Production', detail: 'Deployment · Monitoring' },
+			],
+			closing:
+				'If an application slows down, I can investigate whether the bottleneck is in React, the API, the business logic, a SQL query, a stored procedure, indexing, concurrency or the server configuration — and fix the right layer.',
+		},
+		// Professional Experience
+		experience: {
+			title: 'Experience',
+			subtitle: 'Professional Experience',
+			present: 'Present',
+			roles: [
+				{
+					role: 'Full-Stack Web Developer / Systems Analyst',
+					company: 'INADEH',
+					period: 'Feb 2025 – Present',
+					location: 'Panama',
+					summary:
+						'End-to-end ownership of institutional web applications — from code and APIs to SQL Server, servers and production.',
+					responsibilities: [
+						'Development and maintenance of institutional web applications used in real operations.',
+						'Backend development and REST API design and integration.',
+						'SQL Server integration and data management for internal systems.',
+						'Query and stored procedure optimization.',
+						'Data validation, cleanup and correction of inconsistent records.',
+						'Production deployments from application code to public HTTPS.',
+						'Linux and Windows Server administration and IIS configuration.',
+						'Reverse proxy and SSL certificate configuration.',
+						'Application monitoring, log review and production troubleshooting.',
+						'Technical documentation and end-to-end ownership of applications.',
+					],
+				},
+			],
+		},
+		// Production Case Study
+		caseStudy: {
+			title: 'Case Study',
+			subtitle: 'SQL Server Performance Investigation',
+			badge: 'Production · Anonymized',
+			contextTitle: 'Context',
+			context:
+				'An institutional production system showed degraded response times under concurrent workloads. The goal was to locate the real source of the slowdown rather than treat the symptoms.',
+			investigationTitle: 'Investigation',
+			investigation: [
+				'Identified and analyzed expensive SQL queries.',
+				'Reviewed execution duration and logical reads.',
+				'Examined active sessions and concurrent requests.',
+				'Investigated blocking and wait types.',
+				'Evaluated CPU and memory utilization.',
+				'Reviewed overall database workload.',
+				'Evaluated SQL Server parallelism configuration (MAXDOP).',
+				'Identified query and indexing optimization opportunities.',
+				'Determined whether the bottleneck originated in application code, backend services or the database layer.',
+			],
+			approachTitle: 'Approach',
+			approach:
+				'The work focused on methodical, evidence-based diagnosis across the stack — measuring before changing, and isolating the responsible layer before optimizing it.',
+			techTitle: 'Technologies',
+			tech: [
+				'Microsoft SQL Server',
+				'SQL',
+				'Node.js',
+				'Windows Server',
+				'Production Systems',
+			],
+			disclaimer:
+				'Anonymized case study. No server names, credentials, internal database or table names, private queries or institutional data are shown — the intent is to demonstrate methodology, not infrastructure.',
+		},
+		// Technical Stack
+		techStack: {
+			title: 'Technical Stack',
+			subtitle: 'Tools grouped by domain',
+			groups: [
+				{
+					title: 'Software',
+					items: [
+						'Next.js',
+						'React',
+						'Node.js',
+						'Express',
+						'JavaScript',
+						'Python',
+					],
+				},
+				{
+					title: 'Data',
+					items: ['Microsoft SQL Server', 'SQL', 'Stored Procedures'],
+				},
+				{
+					title: 'Infrastructure',
+					items: [
+						'Linux',
+						'Windows Server',
+						'IIS',
+						'Reverse Proxy',
+						'SSL / HTTPS',
+					],
+				},
+				{
+					title: 'Engineering',
+					items: [
+						'Git',
+						'GitHub',
+						'REST APIs',
+						'Monitoring',
+						'Technical Documentation',
+					],
+				},
+			],
+		},
+		// Portfolio
+		portfolio: {
+			title: 'Projects',
+			subtitle: 'Selected engineering projects',
+			github: 'Github',
+			liveDemo: 'Live Demo',
+			featured: 'Featured project',
+			impactLabel: 'Technical focus',
 		},
 		// About Me
 		aboutMe: {
-			title: 'Profile',
-			subtitle: 'How I work',
+			title: 'About',
+			subtitle: 'How I think about systems',
 			description:
-				'Full-Stack Software Developer with 2 years of experience building, maintaining, and improving systems used in private organizations and government environments. I design internal tools, automate processes, and deploy web applications by connecting frontend, backend, databases, and infrastructure. My approach is practical: clear, maintainable, production-ready solutions.',
-			contactButton: 'Contact me',
-		},
-		// Experience
-		skills: {
-			title: 'Skills',
-			subtitle: 'Skills I have',
-		},
-		// Services
-		services: {
-			title: 'Services',
-			subtitle: 'Solutions I offer',
-		},
-		// Experience
-		experience: {
-			title: 'Experience',
-			subtitle: 'Production experience',
-		},
-		skillLevels: {
-			basic: 'Basic',
-			intermediate: 'Intermediate',
-			experienced: 'Experienced',
+				'I am a Systems Engineer who enjoys understanding systems beyond the application layer. My work spans software development, databases, infrastructure and production, and I like being able to follow a problem to wherever it actually lives, across the whole stack. I am analytical, self-taught and problem-driven, focused on building maintainable systems that keep running in production.',
+			stats: [
+				'Years in Production',
+				'Engineering Domains',
+				'Selected Projects',
+			],
 		},
 		// Personal
 		personal: {
 			title: 'Personal',
 			subtitle: 'Beyond the code',
-		},
-		// Portfolio
-		portfolio: {
-			title: 'Portfolio',
-			subtitle: 'Selected projects and product demos',
-			github: 'Github',
-			liveDemo: 'Live Demo',
-			featured: 'Featured project',
-			impactLabel: 'Impact',
+			images: [
+				{
+					url: '/slider-1.jpg',
+					alt: 'Technology in real context',
+					caption:
+						'Daily work with real systems and production environments.',
+				},
+				{
+					url: '/slider-2.jpg',
+					alt: 'Events and tech community',
+					caption:
+						'Learning and sharing knowledge is part of my professional growth.',
+				},
+				{
+					url: '/slider-3.jpg',
+					alt: 'Learning and discipline',
+					caption:
+						'Constant learning is part of my routine as an engineer.',
+				},
+				{
+					url: '/slider-4.jpg',
+					alt: 'Mind-body balance',
+					caption:
+						'Maintaining physical and mental balance allows me to perform better professionally.',
+				},
+				{
+					url: '/slider-5.jpg',
+					alt: 'Professionalism and presence',
+					caption:
+						'Professionalism and responsibility in every project I undertake.',
+				},
+				{
+					url: '/slider-6.jpg',
+					alt: 'Projects and achievements',
+					caption:
+						'Focused on building and improving solutions that impact real environments.',
+				},
+				{
+					url: '/slider-7.jpg',
+					alt: 'Personal identity',
+					caption:
+						'Beyond code, I enjoy learning and growing as a person.',
+				},
+				{
+					url: '/slider-8.jpg',
+					alt: 'Technology and creativity',
+					caption:
+						'I enjoy analyzing, planning, and transforming ideas into technical solutions.',
+				},
+			],
 		},
 		// Contact
 		contact: {
 			title: 'Contact me',
-			subtitle: 'Let’s talk about your system, automation, or website.',
-			sendMessage: 'Send Message',
+			subtitle:
+				'Let’s talk about a system, a database, or an opportunity.',
+			sendMessage: 'Open',
+			items: [
+				{ title: 'LinkedIn' },
+				{ title: 'Github' },
+				{ title: 'Email' },
+				{ title: 'Phone' },
+			],
 		},
 		// Contact Form
 		contactForm: {
@@ -382,230 +623,20 @@ export const translations = {
 		},
 		// Footer
 		footer: {
-			aboutMe: 'About me',
-			skills: 'Skills',
-			services: 'Services',
-			portfolio: 'Portfolio',
+			expertise: 'Expertise',
+			experience: 'Experience',
+			portfolio: 'Projects',
+			about: 'About',
 			contact: 'Contact',
 			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez Salazar',
 		},
 		// Navbar
 		navbar: {
 			home: 'Home',
-			user: 'User',
-			book: 'Book',
-			target: 'Target',
+			expertise: 'Expertise',
+			experience: 'Experience',
+			portfolio: 'Portfolio',
 			contact: 'Contact',
-		},
-		// Data
-		data: {
-			aboutMe: [
-				{
-					name: 'Production',
-					description:
-						'Experience working on real systems used by internal teams in private and government environments.',
-				},
-				{
-					name: 'Frontend',
-					description:
-						'Modern React and Next.js interfaces focused on clarity, speed, and maintainability.',
-				},
-				{
-					name: 'Backend & Data',
-					description:
-						'APIs, business logic, and SQL Server for internal processes, validation, and traceability.',
-				},
-				{
-					name: 'Infrastructure',
-					description:
-						'Deployments on Linux and Windows Server, IIS, Nginx, SSL, and production support.',
-				},
-				{
-					name: 'Learning',
-					description:
-						'Continuous growth in architecture, automation, and best practices to build stronger solutions.',
-				},
-				{
-					name: 'Values',
-					description:
-						'Clear communication, technical responsibility, and focus on useful business outcomes.',
-				},
-			],
-			skills: [
-				{
-					title: 'Frontend',
-					items: [
-						'JavaScript / TypeScript',
-						'React',
-						'Next.js',
-						'Tailwind CSS',
-						'shadcn/ui',
-						'HTML5 / CSS3',
-					],
-				},
-				{
-					title: 'Backend',
-					items: [
-						'Node.js',
-						'Express.js',
-						'SQL Server',
-						'REST APIs',
-						'Controller-based architecture',
-						'Systems integration',
-					],
-				},
-				{
-					title: 'Infrastructure / Production',
-					items: [
-						'Linux (servers)',
-						'Windows Server',
-						'IIS / Nginx',
-						'SSL / DNS / reverse proxy',
-						'Production deployments and support',
-					],
-				},
-				{
-					title: 'Best Practices',
-					items: [
-						'Functional MVP mindset',
-						'Modular architecture',
-						'Process automation',
-						'Documentation and incident resolution',
-					],
-				},
-			],
-			services: [
-				{
-					title: 'Internal tools and automation',
-					features: [
-						'Administrative panels and internal systems',
-						'Automation of repetitive tasks and workflows',
-						'Forms, dashboards, and reporting tools',
-						'Integration with databases and existing processes',
-						'Migration of desktop tools to web applications',
-						'Operational workflow improvement',
-						'Ongoing support and maintenance',
-					],
-				},
-				{
-					title: 'Custom web applications',
-					features: [
-						'Websites and web applications for companies and professionals',
-						'Frontend with React and Next.js',
-						'Backend with APIs and business logic',
-						'Modular and scalable architecture',
-						'Performance and maintainability optimization',
-						'Integration with existing services and systems',
-					],
-				},
-				{
-					title: 'Infrastructure and deployment',
-					features: [
-						'Linux and Windows Server setup',
-						'IIS, Nginx, SSL, DNS, and reverse proxies',
-						'Node.js application publishing',
-						'403 / 502 incident and connectivity troubleshooting',
-						'Basic monitoring, logs, and operational support',
-						'Maintenance of production environments',
-					],
-				},
-			],
-			experience: [
-				{
-					title: 'Experience',
-					descriptions: [
-						'2 years of experience across private and government environments.',
-						'Development and maintenance of web systems used in real operations.',
-						'Design of internal tools to reduce manual work and improve processes.',
-						'Hands-on work with SQL Server, APIs, modern frontend, and systems integration.',
-						'Deployment and support across Linux, Windows Server, IIS, Nginx, SSL, and reverse proxies.',
-						'Production incident resolution with focus on operational continuity.',
-					],
-				},
-			],
-			skillProficiency: [
-				{
-					title: 'Frontend Development 💄',
-					skills: [
-						{ name: 'HTML', level: 'experienced' as const },
-						{ name: 'CSS', level: 'experienced' as const },
-						{ name: 'JavaScript', level: 'intermediate' as const },
-						{ name: 'Tailwind CSS', level: 'experienced' as const },
-						{ name: 'React', level: 'experienced' as const },
-					],
-				},
-				{
-					title: 'Backend Development 🥷',
-					skills: [
-						{ name: 'Node.js', level: 'intermediate' as const },
-						{ name: 'Python', level: 'intermediate' as const },
-						{ name: 'SQL Server', level: 'intermediate' as const },
-						{ name: 'Next.js', level: 'experienced' as const },
-						{ name: 'Express', level: 'intermediate' as const },
-					],
-				},
-			],
-			// Personal
-			personal: {
-				title: 'Personal',
-				subtitle: 'Beyond the code',
-				images: [
-					{
-						url: '/slider-1.jpg',
-						alt: 'Technology in real context',
-						caption:
-							'Daily work with real systems and production environments.',
-					},
-					{
-						url: '/slider-2.jpg',
-						alt: 'Events and tech community',
-						caption:
-							'Learning and sharing knowledge is part of my professional growth.',
-					},
-					{
-						url: '/slider-3.jpg',
-						alt: 'Learning and discipline',
-						caption:
-							'Constant learning is part of my routine as a developer.',
-					},
-					{
-						url: '/slider-4.jpg',
-						alt: 'Mind-body balance',
-						caption:
-							'Maintaining physical and mental balance allows me to perform better professionally.',
-					},
-					{
-						url: '/slider-5.jpg',
-						alt: 'Professionalism and presence',
-						caption:
-							'Professionalism and responsibility in every project I undertake.',
-					},
-					{
-						url: '/slider-6.jpg',
-						alt: 'Projects and achievements',
-						caption:
-							'Focused on building and improving solutions that impact real environments.',
-					},
-					{
-						url: '/slider-7.jpg',
-						alt: 'Personal identity',
-						caption:
-							'Beyond code, I enjoy learning and growing as a person.',
-					},
-					{
-						url: '/slider-8.jpg',
-						alt: 'Technology and creativity',
-						caption:
-							'I enjoy analyzing, planning, and transforming ideas into technical solutions.',
-					},
-				],
-			},
-			contact: [
-				{ title: 'LinkedIn' },
-				{ title: 'Github' },
-				{ title: 'Email' },
-				{ title: 'Phone' },
-			],
 		},
 	},
 };

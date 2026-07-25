@@ -17,10 +17,10 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col items-center md:items-end gap-4">
                     <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 items-center text-sm md:text-base">
-                        <Link href="#about-me" className="hover:underline">{t.footer.aboutMe}</Link>
-                        <Link href="#skills" className="hover:underline">{t.footer.skills}</Link>
-                        <Link href="#services" className="hover:underline">{t.footer.services}</Link>
+                        <Link href="#expertise" className="hover:underline">{t.footer.expertise}</Link>
+                        <Link href="#experience" className="hover:underline">{t.footer.experience}</Link>
                         <Link href="#portfolio" className="hover:underline">{t.footer.portfolio}</Link>
+                        <Link href="#about-me" className="hover:underline">{t.footer.about}</Link>
                         <Link href="#contact" className="hover:underline">{t.footer.contact}</Link>
                     </div>
                     <div className="flex items-center gap-3">
