@@ -40,8 +40,8 @@ const Personal = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-2 md:left-4"/>
-                <CarouselNext className="right-2 md:right-4"/>
+                <CarouselPrevious className="left-2 md:left-4" label={t.a11y.previousSlide}/>
+                <CarouselNext className="right-2 md:right-4" label={t.a11y.nextSlide}/>
             </Carousel>
         </div>
     )

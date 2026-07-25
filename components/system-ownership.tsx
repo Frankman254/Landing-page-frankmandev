@@ -16,7 +16,7 @@ const SystemOwnership = () => {
             </div>
 
             <p className="reveal delay-1 mx-auto mt-8 max-w-3xl text-center text-base leading-8 text-text-secondary">
-                {t.ownership.intro}
+                {t.ownership.description}
             </p>
 
             {/* Layer chain */}

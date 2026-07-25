@@ -33,16 +33,6 @@ const CoreExpertise = () => {
                             <h3 className="text-lg font-semibold text-foreground">{domain.name}</h3>
                         </div>
                         <p className="mt-4 text-sm leading-7 text-text-secondary">{domain.description}</p>
-                        <div className="mt-5 flex flex-wrap gap-2">
-                            {domain.items.map((item) => (
-                                <span
-                                    key={item}
-                                    className="rounded-full border border-card-border bg-background/70 px-2.5 py-1 text-xs font-medium text-muted-foreground"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
                     </div>
                 ))}
             </div>

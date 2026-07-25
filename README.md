@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frankman Dev — Portfolio
 
-## Getting Started
+Personal portfolio of **Francisco Rodriguez Salazar**, a Systems Engineer focused on
+software development, data and production infrastructure.
 
-First, run the development server:
+The site presents my professional profile end to end: core areas of expertise, how I
+work across the different layers of a system, professional experience, a production
+troubleshooting case study, and selected projects.
+
+**Live site:** https://landing-page-frankmandev.netlify.app
+
+## Overview
+
+A single-page, bilingual (Spanish / English) portfolio built with the Next.js App
+Router. Content is fully localized and theme-aware (light / dark), with subtle
+scroll-reveal animations and a responsive layout from mobile to desktop.
+
+## Tech Stack
+
+- **Next.js** (App Router) + **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui** (Radix UI primitives)
+- **Embla Carousel** — project and photo carousels
+- **React Hook Form** + **Zod** — contact form and validation
+- **Resend** — contact form email delivery
+- **next-themes** — light / dark mode
+
+## Features
+
+- Responsive design (mobile → desktop)
+- Spanish / English localization with instant, no-reload language switching
+- Light / dark theme
+- Professional experience and a production case study
+- Selected projects with image galleries and live demos
+- Accessible contact form with validation and email delivery
+
+## Local Development
+
+Requirements: Node.js (see [`.nvmrc`](./.nvmrc)) and npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To send messages from the contact form locally, set the environment variables used by
+the API route in `app/api/send/route.ts` (Resend API key and destination address) in a
+`.env.local` file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build
 
-## Learn More
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is deployed on **Netlify** (see [`netlify.toml`](./netlify.toml)). Pushing to
+the default branch triggers a new build and deploy.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/            App Router entry, layout, global styles, API routes
+components/     Section components (hero, expertise, experience, ...) + UI primitives
+components/ui/  shadcn/ui components
+lib/            Centralized bilingual content (translations.ts) and utilities
+hooks/          Custom hooks (scroll reveal)
+data.tsx        Navigation, projects and contact data
+public/         Images, icons and downloadable resume
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All human-readable copy lives in `lib/translations.ts` (`es` / `en`) and is rendered
+through the `LanguageProvider` — components do not hardcode display text.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+© Frankman Dev — Francisco Rodriguez Salazar

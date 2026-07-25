@@ -4,7 +4,10 @@ import Link from "next/link";
 import BrandMark from "./brand/brand-mark";
 import { ToggleTheme } from "./toggle-theme";
 import { ToggleLanguage } from "./toggle-language";
+import { useLanguage } from "./language-provider";
+
 const Navbar = () => {
+    const { t } = useLanguage();
     return (
         <nav className="fixed z-20 flex flex-col items-center w-full 
         mt-auto justify-center h-max bottom-20">
@@ -17,12 +20,14 @@ const Navbar = () => {
                 >
                     <BrandMark className="w-8" />
                 </Link>
-                { itemsNavbar.map((item) => (
-                    <div key={item.id} className="cursor-pointer text-muted-foreground hover:bg-surface-hover hover:text-foreground dark:hover:bg-surface-hover px-3 py-2 rounded-full transition duration-150">
-                        <Link href={item.link}>{item.icon}</Link>
-
-                    </div>
-                )) }
+                { itemsNavbar.map((item) => {
+                    const label = t.navbar[item.title.toLowerCase() as keyof typeof t.navbar];
+                    return (
+                        <div key={item.id} className="cursor-pointer text-muted-foreground hover:bg-surface-hover hover:text-foreground dark:hover:bg-surface-hover px-3 py-2 rounded-full transition duration-150">
+                            <Link href={item.link} aria-label={label} title={label}>{item.icon}</Link>
+                        </div>
+                    );
+                }) }
                 <ToggleLanguage/>
                 <ToggleTheme/>
             </div>

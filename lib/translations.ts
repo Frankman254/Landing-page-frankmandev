@@ -9,11 +9,11 @@ export const translations = {
 			role: 'Ingeniero en Sistemas',
 			specialization: 'Software · Datos · Infraestructura',
 			summary:
-				'Construyo, despliego y mantengo sistemas en producción de extremo a extremo: desde el código de la aplicación y las APIs REST hasta SQL Server, los servidores y la infraestructura.',
-			brandCard:
-				'Responsabilidad end-to-end sobre sistemas en producción: software, datos e infraestructura.',
+				'Construyo y mantengo software en toda la pila: desde la aplicación que usa la gente hasta los servidores donde funciona. Me gusta hacerme responsable de lo que construyo y entender cómo se conecta cada parte.',
+			brandCard: 'Software que se publica, funciona y sigue funcionando.',
 			backdropKicker: 'Software · Datos · Infraestructura',
-			backdropHeadline: 'Sistemas en producción, de extremo a extremo.',
+			backdropTag: 'Ingeniería de sistemas',
+			backdropHeadline: 'Construyo sistemas que funcionan de principio a fin.',
 			email: 'frankman254@gmail.com',
 			phone: '+507 6075-8976',
 			primaryCta: 'Ver experiencia',
@@ -25,61 +25,27 @@ export const translations = {
 		// Core Expertise
 		expertise: {
 			title: 'Core Expertise',
-			subtitle: 'En qué trabajo, de extremo a extremo',
+			subtitle: 'Áreas en las que trabajo',
 			domains: [
 				{
-					name: 'Software Engineering',
+					name: 'Ingeniería de Software',
 					description:
-						'Aplicaciones web y sistemas institucionales construidos desde cero y mantenidos en operación real, con APIs REST y lógica de negocio.',
-					items: [
-						'Next.js',
-						'React',
-						'Node.js',
-						'Express',
-						'REST APIs',
-						'JavaScript',
-						'Python',
-					],
+						'Construcción de aplicaciones web y sistemas internos: desde la interfaz que usa la gente hasta la lógica de negocio y las APIs que hay detrás.',
 				},
 				{
-					name: 'Data & SQL Server',
+					name: 'Datos & SQL Server',
 					description:
-						'Trabajo directo con Microsoft SQL Server en producción: optimización de consultas y stored procedures, validación y limpieza de datos, y análisis de rendimiento.',
-					items: [
-						'Microsoft SQL Server',
-						'Query Optimization',
-						'Stored Procedures',
-						'Data Validation',
-						'Data Cleanup',
-						'Performance Analysis',
-						'Backup / Restore',
-					],
+						'Trabajo con datos relacionales en sistemas reales: escribir y mejorar consultas y stored procedures, y mantener la consistencia de la información.',
 				},
 				{
-					name: 'Infrastructure & Production',
+					name: 'Infraestructura & Producción',
 					description:
-						'Publicación y operación de aplicaciones desde el código hasta HTTPS público: servidores, IIS, reverse proxy y certificados.',
-					items: [
-						'Linux Server',
-						'Windows Server',
-						'IIS',
-						'Reverse Proxy',
-						'SSL / HTTPS',
-						'Production Deployments',
-						'Monitoring',
-					],
+						'Poner aplicaciones en línea y mantenerlas ahí: servidores, hosting web, certificados y despliegues.',
 				},
 				{
-					name: 'Systems & Troubleshooting',
+					name: 'Sistemas & Diagnóstico',
 					description:
-						'Diagnóstico de problemas de producción a través de toda la pila, desde la capa de aplicación hasta la base de datos y el servidor.',
-					items: [
-						'Production Support',
-						'Performance Diagnosis',
-						'Application Monitoring',
-						'Incident Analysis',
-						'End-to-End Troubleshooting',
-					],
+						'Ver el sistema como un todo y diagnosticar problemas donde aparezcan, no solo en el código.',
 				},
 			],
 		},
@@ -87,17 +53,17 @@ export const translations = {
 		ownership: {
 			title: 'System Ownership',
 			subtitle: 'Un sistema, todas las capas',
-			intro:
-				'No me detengo en la capa de aplicación. Puedo intervenir en toda la cadena técnica de un sistema y, cuando algo falla o va lento, rastrear el problema hasta la capa donde realmente vive.',
+			description:
+				'Desarrollo y mantengo aplicaciones desde el código hasta producción. Cuando aparece un problema, puedo moverme entre frontend, backend, SQL Server e infraestructura para identificar su causa y trabajar sobre la capa que corresponde.',
 			steps: [
-				{ name: 'Frontend', detail: 'React / Next.js' },
-				{ name: 'Backend / API', detail: 'Node.js · Express · REST' },
-				{ name: 'SQL Server', detail: 'Queries · Stored Procedures' },
-				{ name: 'Infraestructura', detail: 'IIS · Reverse Proxy · SSL' },
+				{ name: 'Frontend', detail: 'React · Next.js' },
+				{ name: 'Backend & APIs', detail: 'Node.js · Express · REST' },
+				{ name: 'Data', detail: 'SQL Server · Stored Procedures' },
+				{ name: 'Infraestructura', detail: 'Windows/Linux · IIS · Reverse Proxy' },
 				{ name: 'Producción', detail: 'Despliegue · Monitoreo' },
 			],
 			closing:
-				'Si una aplicación se vuelve lenta, puedo investigar si el cuello de botella está en React, la API, la lógica de negocio, una consulta SQL, un stored procedure, los índices, la concurrencia o la configuración del servidor, y trabajar sobre la capa correcta.',
+				'Mi enfoque no es limitarme a una sola capa, sino entender cómo se conecta el sistema completo.',
 		},
 		// Professional Experience
 		experience: {
@@ -111,53 +77,40 @@ export const translations = {
 					period: 'Feb 2025 – Actualidad',
 					location: 'Panamá',
 					summary:
-						'Responsabilidad end-to-end sobre aplicaciones web institucionales: desde el código y las APIs hasta SQL Server, los servidores y la producción.',
+						'Me hago responsable de aplicaciones web institucionales de principio a fin: desde el desarrollo hasta el despliegue y el soporte continuo.',
 					responsibilities: [
-						'Desarrollo y mantenimiento de aplicaciones web institucionales usadas en operaciones reales.',
-						'Desarrollo backend e integración de APIs REST.',
-						'Integración con SQL Server y gestión de datos de sistemas internos.',
-						'Optimización de consultas y stored procedures.',
-						'Validación, limpieza y corrección de registros inconsistentes.',
-						'Despliegues en producción desde el código hasta HTTPS público.',
-						'Administración de servidores Linux y Windows Server, y configuración de IIS.',
-						'Configuración de reverse proxy y certificados SSL.',
-						'Monitoreo de aplicaciones, revisión de logs y troubleshooting en producción.',
-						'Documentación técnica y responsabilidad end-to-end de las aplicaciones.',
+						'Desarrollo y mantenimiento de aplicaciones web institucionales usadas en operaciones diarias.',
+						'Diseño e integración de APIs REST y servicios backend.',
+						'Trabajo directo con SQL Server: consultas, stored procedures e integridad de datos.',
+						'Despliegue de aplicaciones y operación sobre servidores Windows y Linux.',
+						'Diagnóstico y resolución de incidencias en producción entre las capas de aplicación, datos e infraestructura.',
+						'Documentación de sistemas y responsabilidad de las aplicaciones desde el código hasta el despliegue.',
 					],
 				},
 			],
 		},
-		// Production Case Study
+		// Case Study
 		caseStudy: {
 			title: 'Case Study',
-			subtitle: 'SQL Server Performance Investigation',
+			subtitle: 'Diagnóstico de rendimiento en producción',
 			badge: 'Producción · Anonimizado',
 			contextTitle: 'Contexto',
 			context:
-				'Un sistema institucional en producción presentaba tiempos de respuesta degradados bajo carga concurrente. El objetivo era localizar el origen real de la lentitud en lugar de tratar los síntomas.',
+				'Un sistema institucional en producción respondía con lentitud bajo uso concurrente. El objetivo era encontrar el origen real de la lentitud en lugar de tratar los síntomas.',
 			investigationTitle: 'Investigación',
 			investigation: [
-				'Identificación y análisis de consultas SQL costosas.',
-				'Revisión de tiempo de ejecución y logical reads.',
-				'Análisis de sesiones activas y solicitudes concurrentes.',
-				'Investigación de blocking y wait types.',
-				'Evaluación del uso de CPU y memoria.',
-				'Revisión de la carga general de la base de datos.',
-				'Evaluación de la configuración de paralelismo (MAXDOP).',
-				'Identificación de oportunidades de optimización de consultas e índices.',
-				'Determinación de si el cuello de botella se originaba en el código de la aplicación, los servicios backend o la capa de base de datos.',
+				'Reproducción del problema y medición de tiempos de respuesta bajo carga.',
+				'Revisión de la aplicación y el backend en busca de solicitudes lentas y cuellos de botella.',
+				'Análisis de SQL Server: consultas costosas, tiempo de ejecución y bloqueos.',
+				'Revisión de los recursos del servidor: CPU, memoria y carga general.',
+				'Aislamiento de si la causa estaba en la aplicación, la capa de datos o la infraestructura.',
+				'Aplicación de mejoras puntuales sobre la capa realmente responsable.',
 			],
 			approachTitle: 'Enfoque',
 			approach:
-				'El trabajo se centró en un diagnóstico metódico y basado en evidencia a través de toda la pila: medir antes de cambiar y aislar la capa responsable antes de optimizarla.',
+				'Un proceso metódico y basado en evidencia a través de toda la pila: medir primero, aislar la capa responsable y luego optimizarla.',
 			techTitle: 'Tecnologías',
-			tech: [
-				'Microsoft SQL Server',
-				'SQL',
-				'Node.js',
-				'Windows Server',
-				'Production Systems',
-			],
+			tech: ['Node.js', 'SQL Server', 'Windows Server', 'IIS'],
 			disclaimer:
 				'Caso anonimizado. No se muestran nombres de servidores, credenciales, nombres de bases de datos o tablas internas, consultas privadas ni datos institucionales: el objetivo es mostrar la metodología, no la infraestructura.',
 		},
@@ -206,7 +159,7 @@ export const translations = {
 		// Portfolio
 		portfolio: {
 			title: 'Proyectos',
-			subtitle: 'Proyectos de ingeniería seleccionados',
+			subtitle: 'Proyectos seleccionados',
 			github: 'Github',
 			liveDemo: 'Live Demo',
 			featured: 'Proyecto destacado',
@@ -215,12 +168,12 @@ export const translations = {
 		// About Me
 		aboutMe: {
 			title: 'About',
-			subtitle: 'Cómo entiendo los sistemas',
+			subtitle: 'Cómo pienso como ingeniero',
 			description:
-				'Soy Ingeniero en Sistemas y disfruto entender los sistemas más allá de la capa de aplicación. Mi trabajo abarca desarrollo de software, bases de datos, infraestructura y producción, y me gusta poder seguir un problema hasta donde realmente vive, a través de toda la pila. Soy analítico, autodidacta y orientado a resolver problemas, con foco en construir sistemas mantenibles que sigan funcionando en producción.',
+				'Me gusta entender cómo funcionan realmente las cosas, no solo lograr que funcionen. Me muevo con comodidad entre escribir código, trabajar con datos y ocuparme del entorno donde vive una aplicación, y me importa construir cosas que sigan siendo mantenibles con el tiempo. Soy analítico, en buena parte autodidacta, y me motiva entender por qué algo se comporta como se comporta.',
 			stats: [
-				'Años en producción',
-				'Dominios de ingeniería',
+				'Años de experiencia',
+				'Dominios principales',
 				'Proyectos seleccionados',
 			],
 		},
@@ -283,7 +236,7 @@ export const translations = {
 		contact: {
 			title: 'Contacta conmigo',
 			subtitle:
-				'Conversemos sobre un sistema, una base de datos o una oportunidad.',
+				'Conversemos sobre un sistema, un proyecto o una oportunidad.',
 			sendMessage: 'Abrir',
 			items: [
 				{ title: 'LinkedIn' },
@@ -298,9 +251,15 @@ export const translations = {
 			emailPlaceholder: 'Tu Email',
 			messagePlaceholder: 'Tu Mensaje',
 			submitButton: 'Enviar',
+			sendingButton: 'Enviando',
 			successMessage: '¡Formulario enviado con éxito!',
 			errorMessage:
 				'Hubo un error al enviar. Intenta de nuevo o escríbeme directamente a frankman254@gmail.com',
+			validation: {
+				nameMin: 'Mínimo 2 caracteres',
+				emailInvalid: 'Email inválido',
+				messageMin: 'Mínimo 10 caracteres',
+			},
 		},
 		// Footer
 		footer: {
@@ -311,13 +270,27 @@ export const translations = {
 			contact: 'Contacto',
 			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez Salazar',
 		},
-		// Navbar
+		// Navbar (used for accessible labels)
 		navbar: {
-			home: 'Home',
+			home: 'Inicio',
 			expertise: 'Expertise',
-			experience: 'Experience',
-			portfolio: 'Portfolio',
-			contact: 'Contact',
+			experience: 'Experiencia',
+			portfolio: 'Proyectos',
+			contact: 'Contacto',
+		},
+		// Brand mark descriptive text
+		brand: {
+			personalBrand: 'Marca Personal',
+			tagline: 'Ingeniero en Sistemas',
+		},
+		// Accessibility / control labels
+		a11y: {
+			previousSlide: 'Anterior',
+			nextSlide: 'Siguiente',
+			switchToLight: 'Cambiar a modo claro',
+			switchToDark: 'Cambiar a modo oscuro',
+			lightMode: 'Modo claro',
+			darkMode: 'Modo oscuro',
 		},
 	},
 	en: {
@@ -328,11 +301,11 @@ export const translations = {
 			role: 'Systems Engineer',
 			specialization: 'Software · Data · Infrastructure',
 			summary:
-				'I build, deploy and maintain production systems end-to-end — from application code and REST APIs to SQL Server, servers and infrastructure.',
-			brandCard:
-				'End-to-end ownership of production systems — software, data and infrastructure.',
+				'I build and maintain software across the full stack — from the application people use to the servers it runs on. I like owning what I build and understanding how every part connects.',
+			brandCard: 'Software that ships, runs and keeps working.',
 			backdropKicker: 'Software · Data · Infrastructure',
-			backdropHeadline: 'Production systems, owned end to end.',
+			backdropTag: 'Systems engineering',
+			backdropHeadline: 'Building systems that work end to end.',
 			email: 'frankman254@gmail.com',
 			phone: '+507 6075-8976',
 			primaryCta: 'View Experience',
@@ -344,79 +317,45 @@ export const translations = {
 		// Core Expertise
 		expertise: {
 			title: 'Core Expertise',
-			subtitle: 'What I work with, end to end',
+			subtitle: 'Areas I work across',
 			domains: [
 				{
 					name: 'Software Engineering',
 					description:
-						'Web applications and institutional systems built from scratch and maintained in real operation, with REST APIs and business logic.',
-					items: [
-						'Next.js',
-						'React',
-						'Node.js',
-						'Express',
-						'REST APIs',
-						'JavaScript',
-						'Python',
-					],
+						'Building web applications and internal systems — from the interface people use to the business logic and APIs behind it.',
 				},
 				{
 					name: 'Data & SQL Server',
 					description:
-						'Hands-on work with Microsoft SQL Server in production: query and stored procedure optimization, data validation and cleanup, and performance analysis.',
-					items: [
-						'Microsoft SQL Server',
-						'Query Optimization',
-						'Stored Procedures',
-						'Data Validation',
-						'Data Cleanup',
-						'Performance Analysis',
-						'Backup / Restore',
-					],
+						'Working with relational data in real systems: writing and improving queries and stored procedures, and keeping data consistent.',
 				},
 				{
 					name: 'Infrastructure & Production',
 					description:
-						'Publishing and running applications from code to public HTTPS: servers, IIS, reverse proxies and certificates.',
-					items: [
-						'Linux Server',
-						'Windows Server',
-						'IIS',
-						'Reverse Proxy',
-						'SSL / HTTPS',
-						'Production Deployments',
-						'Monitoring',
-					],
+						'Getting applications online and keeping them there — servers, web hosting, certificates and deployments.',
 				},
 				{
 					name: 'Systems & Troubleshooting',
 					description:
-						'Diagnosing production issues across the whole stack, from the application layer down to the database and the server.',
-					items: [
-						'Production Support',
-						'Performance Diagnosis',
-						'Application Monitoring',
-						'Incident Analysis',
-						'End-to-End Troubleshooting',
-					],
+						'Seeing a system as a whole and diagnosing issues wherever they show up, not just in the code.',
 				},
 			],
 		},
 		// End-to-End System Ownership
 		ownership: {
 			title: 'System Ownership',
-			subtitle: 'One system, every layer',
-			intro:
-				"I don't stop at the application layer. I can work across the full technical chain of a system and, when something breaks or slows down, trace the problem to the layer where it actually lives.",
+			subtitle: 'End-to-end system ownership',
+			description:
+				'I build and maintain applications from code to production. When a problem shows up, I can move across frontend, backend, SQL Server and infrastructure to find its cause and work on the layer that needs it.',
 			steps: [
-				{ name: 'Frontend', detail: 'React / Next.js' },
-				{ name: 'Backend / API', detail: 'Node.js · Express · REST' },
-				{ name: 'SQL Server', detail: 'Queries · Stored Procedures' },
-				{ name: 'Infrastructure', detail: 'IIS · Reverse Proxy · SSL' },
+				{ name: 'Frontend', detail: 'React · Next.js' },
+				{ name: 'Backend & APIs', detail: 'Node.js · Express · REST' },
+				{ name: 'Data', detail: 'SQL Server · Stored Procedures' },
+				{ name: 'Infrastructure', detail: 'Windows/Linux · IIS · Reverse Proxy' },
 				{ name: 'Production', detail: 'Deployment · Monitoring' },
 			],
 			closing:
-				'If an application slows down, I can investigate whether the bottleneck is in React, the API, the business logic, a SQL query, a stored procedure, indexing, concurrency or the server configuration — and fix the right layer.',
+				"My goal isn't to stay inside a single layer, but to understand how the whole system fits together.",
 		},
 		// Professional Experience
 		experience: {
@@ -430,53 +369,40 @@ export const translations = {
 					period: 'Feb 2025 – Present',
 					location: 'Panama',
 					summary:
-						'End-to-end ownership of institutional web applications — from code and APIs to SQL Server, servers and production.',
+						'I own institutional web applications end to end — from development to deployment and ongoing support.',
 					responsibilities: [
-						'Development and maintenance of institutional web applications used in real operations.',
-						'Backend development and REST API design and integration.',
-						'SQL Server integration and data management for internal systems.',
-						'Query and stored procedure optimization.',
-						'Data validation, cleanup and correction of inconsistent records.',
-						'Production deployments from application code to public HTTPS.',
-						'Linux and Windows Server administration and IIS configuration.',
-						'Reverse proxy and SSL certificate configuration.',
-						'Application monitoring, log review and production troubleshooting.',
-						'Technical documentation and end-to-end ownership of applications.',
+						'Build and maintain institutional web applications used in day-to-day operations.',
+						'Design and integrate REST APIs and backend services.',
+						'Work directly with SQL Server — queries, stored procedures and data integrity.',
+						'Deploy applications and keep them running on Windows and Linux servers.',
+						'Diagnose and resolve production issues across the application, data and infrastructure layers.',
+						'Document systems and maintain ownership of applications from code to deployment.',
 					],
 				},
 			],
 		},
-		// Production Case Study
+		// Case Study
 		caseStudy: {
 			title: 'Case Study',
-			subtitle: 'SQL Server Performance Investigation',
+			subtitle: 'Production Performance Troubleshooting',
 			badge: 'Production · Anonymized',
 			contextTitle: 'Context',
 			context:
-				'An institutional production system showed degraded response times under concurrent workloads. The goal was to locate the real source of the slowdown rather than treat the symptoms.',
+				'An institutional system in production was responding slowly under concurrent use. The goal was to find the real source of the slowdown instead of treating the symptoms.',
 			investigationTitle: 'Investigation',
 			investigation: [
-				'Identified and analyzed expensive SQL queries.',
-				'Reviewed execution duration and logical reads.',
-				'Examined active sessions and concurrent requests.',
-				'Investigated blocking and wait types.',
-				'Evaluated CPU and memory utilization.',
-				'Reviewed overall database workload.',
-				'Evaluated SQL Server parallelism configuration (MAXDOP).',
-				'Identified query and indexing optimization opportunities.',
-				'Determined whether the bottleneck originated in application code, backend services or the database layer.',
+				'Reproduced the issue and measured response times under load.',
+				'Reviewed the application and backend for slow requests and bottlenecks.',
+				'Analyzed SQL Server: expensive queries, execution time and blocking.',
+				'Checked server resources — CPU, memory and overall workload.',
+				'Isolated whether the cause was in the application, the data layer or the infrastructure.',
+				'Applied targeted improvements to the layer actually responsible.',
 			],
 			approachTitle: 'Approach',
 			approach:
-				'The work focused on methodical, evidence-based diagnosis across the stack — measuring before changing, and isolating the responsible layer before optimizing it.',
+				'A methodical, evidence-based process across the stack — measure first, isolate the responsible layer, then optimize it.',
 			techTitle: 'Technologies',
-			tech: [
-				'Microsoft SQL Server',
-				'SQL',
-				'Node.js',
-				'Windows Server',
-				'Production Systems',
-			],
+			tech: ['Node.js', 'SQL Server', 'Windows Server', 'IIS'],
 			disclaimer:
 				'Anonymized case study. No server names, credentials, internal database or table names, private queries or institutional data are shown — the intent is to demonstrate methodology, not infrastructure.',
 		},
@@ -525,7 +451,7 @@ export const translations = {
 		// Portfolio
 		portfolio: {
 			title: 'Projects',
-			subtitle: 'Selected engineering projects',
+			subtitle: 'Selected projects',
 			github: 'Github',
 			liveDemo: 'Live Demo',
 			featured: 'Featured project',
@@ -534,12 +460,12 @@ export const translations = {
 		// About Me
 		aboutMe: {
 			title: 'About',
-			subtitle: 'How I think about systems',
+			subtitle: 'How I think as an engineer',
 			description:
-				'I am a Systems Engineer who enjoys understanding systems beyond the application layer. My work spans software development, databases, infrastructure and production, and I like being able to follow a problem to wherever it actually lives, across the whole stack. I am analytical, self-taught and problem-driven, focused on building maintainable systems that keep running in production.',
+				"I like understanding how things actually work, not just getting them to run. I move comfortably between writing code, working with data, and dealing with the environment where an application lives — and I care about building things that stay maintainable over time. I'm analytical, largely self-taught, and driven by figuring out why something behaves the way it does.",
 			stats: [
-				'Years in Production',
-				'Engineering Domains',
+				'Years of Experience',
+				'Core Domains',
 				'Selected Projects',
 			],
 		},
@@ -601,8 +527,7 @@ export const translations = {
 		// Contact
 		contact: {
 			title: 'Contact me',
-			subtitle:
-				'Let’s talk about a system, a database, or an opportunity.',
+			subtitle: 'Let’s talk about a system, a project, or an opportunity.',
 			sendMessage: 'Open',
 			items: [
 				{ title: 'LinkedIn' },
@@ -617,9 +542,15 @@ export const translations = {
 			emailPlaceholder: 'Your Email',
 			messagePlaceholder: 'Your Message',
 			submitButton: 'Send',
+			sendingButton: 'Sending',
 			successMessage: '✅ Form submitted successfully!',
 			errorMessage:
 				'Something went wrong. Please try again or email me directly at frankman254@gmail.com',
+			validation: {
+				nameMin: 'At least 2 characters',
+				emailInvalid: 'Invalid email',
+				messageMin: 'At least 10 characters',
+			},
 		},
 		// Footer
 		footer: {
@@ -630,13 +561,27 @@ export const translations = {
 			contact: 'Contact',
 			copyright: '© 2026 | Frankman Dev by Francisco Rodriguez Salazar',
 		},
-		// Navbar
+		// Navbar (used for accessible labels)
 		navbar: {
 			home: 'Home',
 			expertise: 'Expertise',
 			experience: 'Experience',
-			portfolio: 'Portfolio',
+			portfolio: 'Projects',
 			contact: 'Contact',
+		},
+		// Brand mark descriptive text
+		brand: {
+			personalBrand: 'Personal Brand',
+			tagline: 'Systems Engineer',
+		},
+		// Accessibility / control labels
+		a11y: {
+			previousSlide: 'Previous slide',
+			nextSlide: 'Next slide',
+			switchToLight: 'Switch to light mode',
+			switchToDark: 'Switch to dark mode',
+			lightMode: 'Light mode',
+			darkMode: 'Dark mode',
 		},
 	},
 };

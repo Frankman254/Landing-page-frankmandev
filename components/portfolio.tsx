@@ -19,9 +19,13 @@ import {
 function PortfolioGallery({
     images,
     language,
+    previousLabel,
+    nextLabel,
 }: {
     images: Array<{ src: string; alt: { es: string; en: string } }>;
     language: "es" | "en";
+    previousLabel: string;
+    nextLabel: string;
 }) {
     const [api, setApi] = React.useState<CarouselApi>();
     const [current, setCurrent] = React.useState(0);
@@ -69,8 +73,8 @@ function PortfolioGallery({
                 </CarouselContent>
                 {images.length > 1 ? (
                     <>
-                        <CarouselPrevious className="left-3 top-auto bottom-3 h-9 w-9 translate-y-0 border-border bg-background/85 backdrop-blur-sm" />
-                        <CarouselNext className="right-3 top-auto bottom-3 h-9 w-9 translate-y-0 border-border bg-background/85 backdrop-blur-sm" />
+                        <CarouselPrevious className="left-3 top-auto bottom-3 h-9 w-9 translate-y-0 border-border bg-background/85 backdrop-blur-sm" label={previousLabel} />
+                        <CarouselNext className="right-3 top-auto bottom-3 h-9 w-9 translate-y-0 border-border bg-background/85 backdrop-blur-sm" label={nextLabel} />
                         <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center gap-2">
                             {images.map((item, index) => (
                                 <span
@@ -182,6 +186,8 @@ const Portfolio = () => {
                                         : [{ src: data.image, alt: data.alt }]
                                 }
                                 language={language}
+                                previousLabel={t.a11y.previousSlide}
+                                nextLabel={t.a11y.nextSlide}
                             />
                         </div>
                     </div>

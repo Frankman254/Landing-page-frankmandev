@@ -2,7 +2,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { Loader2 } from "lucide-react"
 
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form"
@@ -11,19 +11,27 @@ import { Textarea } from "./ui/textarea"
 import { Button } from "./ui/button"
 import { useLanguage } from "./language-provider"
 
-const formSchema = z.object({
-    username: z.string().min(2, "Mínimo 2 caracteres").max(50),
-    email: z.string().email("Email inválido"),
-    message: z.string().min(10, "Mínimo 10 caracteres"),
-})
-
-type FormValues = z.infer<typeof formSchema>
+type FormValues = {
+    username: string
+    email: string
+    message: string
+}
 
 const ContactForm = () => {
     const { t } = useLanguage()
     const [successForm, setSuccessForm] = useState(false)
     const [errorForm, setErrorForm] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
+
+    const formSchema = useMemo(
+        () =>
+            z.object({
+                username: z.string().min(2, t.contactForm.validation.nameMin).max(50),
+                email: z.string().email(t.contactForm.validation.emailInvalid),
+                message: z.string().min(10, t.contactForm.validation.messageMin),
+            }),
+        [t]
+    )
 
     const form = useForm<FormValues>({
         resolver: zodResolver(formSchema),
@@ -123,7 +131,7 @@ const ContactForm = () => {
                     {isLoading ? (
                         <>
                             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                            {t.contactForm.submitButton}...
+                            {t.contactForm.sendingButton}...
                         </>
                     ) : (
                         t.contactForm.submitButton

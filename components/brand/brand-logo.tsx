@@ -1,4 +1,6 @@
+"use client";
 import BrandMark from './brand-mark';
+import { useLanguage } from '../language-provider';
 
 type BrandLogoProps = {
 	className?: string;
@@ -13,6 +15,7 @@ const BrandLogo = ({
 	showTagline = true,
 	markAnimated = false,
 }: BrandLogoProps) => {
+	const { t } = useLanguage();
 	const textColor =
 		textTone === 'light'
 			? 'text-white'
@@ -36,7 +39,7 @@ const BrandLogo = ({
 				<span
 					className={`text-xs font-semibold uppercase tracking-[0.45em] ${mutedColor}`}
 				>
-					Personal Brand
+					{t.brand.personalBrand}
 				</span>
 				<span
 					className={`mt-2 text-2xl font-black uppercase tracking-[0.28em] ${textColor}`}
@@ -51,7 +54,7 @@ const BrandLogo = ({
 					<span
 						className={`mt-3 text-[11px] uppercase tracking-[0.36em] ${mutedColor}`}
 					>
-						Systems Engineer
+						{t.brand.tagline}
 					</span>
 				) : null}
 			</div>
