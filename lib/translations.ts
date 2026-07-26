@@ -88,6 +88,19 @@ export const translations = {
 						'Monitoreo, análisis de logs, atención de incidentes en producción y documentación técnica.',
 					],
 				},
+				{
+					role: 'Desarrollador Jr. Odoo',
+					company: 'Compulab S.A.',
+					period: 'Jul 2023 – Nov 2023',
+					location: 'Panamá',
+					summary:
+						'Primera experiencia profesional en desarrollo, trabajando con Python, JavaScript y PostgreSQL para construir módulos y flujos de negocio sobre una plataforma ERP.',
+					responsibilities: [
+						'Desarrollo y personalización de módulos ERP utilizando Python y JavaScript.',
+						'Creación de formularios web, vistas, campos y flujos de negocio.',
+						'Trabajo con datos de aplicación respaldados por PostgreSQL.',
+					],
+				},
 			],
 		},
 		// Case Study
@@ -146,7 +159,6 @@ export const translations = {
 						'Express',
 						'REST APIs',
 						'Python',
-						'Odoo',
 					],
 				},
 				{
@@ -427,6 +439,19 @@ export const translations = {
 						'Monitor systems, analyze logs, handle production incidents and write technical documentation.',
 					],
 				},
+				{
+					role: 'Junior Odoo Developer',
+					company: 'Compulab S.A.',
+					period: 'Jul 2023 – Nov 2023',
+					location: 'Panama',
+					summary:
+						'First professional development role, working with Python, JavaScript and PostgreSQL to build modules and business workflows on an ERP platform.',
+					responsibilities: [
+						'Developed and customized ERP modules using Python and JavaScript.',
+						'Built web forms, views, fields and business workflows.',
+						'Worked with PostgreSQL-backed application data.',
+					],
+				},
 			],
 		},
 		// Case Study
@@ -485,7 +510,6 @@ export const translations = {
 						'Express',
 						'REST APIs',
 						'Python',
-						'Odoo',
 					],
 				},
 				{

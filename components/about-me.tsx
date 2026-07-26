@@ -8,7 +8,7 @@ const AboutMe = () => {
     const { t } = useLanguage();
     const ref = useScrollReveal();
 
-    const statValues = ["2+", "4", String(dataPortfolio.length)];
+    const statValues = ["3+", "4", String(dataPortfolio.length)];
 
     return (
         <div ref={ref} className="p-6 md:px-12 md:py-14 max-w-4xl mx-auto" id="about-me">
