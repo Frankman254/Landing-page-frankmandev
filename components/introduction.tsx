@@ -37,7 +37,7 @@ const Introduction = () => {
                         </Link>
                         <Link
                             className={buttonVariants({ variant: 'secondary' })}
-                            href="/Francisco_Rodriguez_Salazar_CV_2026.pdf"
+                            href="/Francisco_Rodriguez_Salazar_CV_Julio_2026.pdf"
                             download="Francisco-Rodriguez-Salazar-CV.pdf"
                             prefetch={false}
                         >

@@ -35,12 +35,12 @@ export const translations = {
 				{
 					name: 'Datos & SQL Server',
 					description:
-						'Trabajo con datos relacionales en sistemas reales: escribir y mejorar consultas y stored procedures, y mantener la consistencia de la información.',
+						'Trabajo con datos relacionales en sistemas reales: escribir y optimizar consultas y stored procedures, diagnosticar rendimiento y gestionar accesos con permisos específicos.',
 				},
 				{
 					name: 'Infraestructura & Producción',
 					description:
-						'Poner aplicaciones en línea y mantenerlas ahí: servidores, hosting web, certificados y despliegues.',
+						'Poner aplicaciones en línea y mantenerlas ahí: servidores Windows y Linux, IIS y Nginx, certificados, despliegues y administración de usuarios en Linux.',
 				},
 				{
 					name: 'Sistemas & Diagnóstico',
@@ -79,12 +79,13 @@ export const translations = {
 					summary:
 						'Me hago responsable de aplicaciones web institucionales de principio a fin: desde el desarrollo hasta el despliegue y el soporte continuo.',
 					responsibilities: [
-						'Desarrollo y mantenimiento de aplicaciones web institucionales usadas en operaciones diarias.',
-						'Diseño e integración de APIs REST y servicios backend.',
-						'Trabajo directo con SQL Server: consultas, stored procedures e integridad de datos.',
-						'Despliegue de aplicaciones y operación sobre servidores Windows y Linux.',
-						'Diagnóstico y resolución de incidencias en producción entre las capas de aplicación, datos e infraestructura.',
-						'Documentación de sistemas y responsabilidad de las aplicaciones desde el código hasta el despliegue.',
+						'Desarrollo y mantenimiento de aplicaciones web institucionales de principio a fin, con frontend, backend y APIs REST.',
+						'Trabajo directo con SQL Server: consultas, stored procedures, optimización y diagnóstico de rendimiento.',
+						'Backup y restore entre producción y desarrollo, y validación de la integridad de los datos.',
+						'Creación de logins y usuarios de SQL Server con permisos específicos para aplicaciones y necesidades operativas.',
+						'Creación de usuarios Linux y configuración de privilegios administrativos (sudo) mediante scripts.',
+						'Despliegue y operación sobre servidores Windows y Linux: IIS, reverse proxy, HTTPS y certificados SSL.',
+						'Monitoreo, análisis de logs, atención de incidentes en producción y documentación técnica.',
 					],
 				},
 			],
@@ -118,41 +119,87 @@ export const translations = {
 		techStack: {
 			title: 'Technical Stack',
 			subtitle: 'Herramientas agrupadas por dominio',
+			legendTitle: 'Cómo leer esta sección',
+			legend: [
+				{
+					level: 'professional',
+					label: 'Profesional',
+					description: 'Usado como parte de mi trabajo profesional.',
+				},
+				{
+					level: 'hands-on',
+					label: 'Hands-on',
+					description:
+						'Usado en proyectos, laboratorios y entornos de desarrollo.',
+				},
+			],
 			groups: [
 				{
-					title: 'Software',
+					title: 'Software Engineering',
+					level: 'professional',
 					items: [
-						'Next.js',
 						'React',
+						'Next.js',
+						'JavaScript',
+						'TypeScript',
 						'Node.js',
 						'Express',
-						'JavaScript',
+						'REST APIs',
 						'Python',
+						'Odoo',
 					],
 				},
 				{
-					title: 'Data',
-					items: ['Microsoft SQL Server', 'SQL', 'Stored Procedures'],
+					title: 'Data & SQL Server',
+					level: 'professional',
+					items: [
+						'Microsoft SQL Server',
+						'T-SQL',
+						'Stored Procedures',
+						'Query Optimization',
+						'Performance Analysis',
+						'Backup / Restore',
+						'Data Validation',
+						'Users & Permissions',
+						'PostgreSQL',
+					],
 				},
 				{
-					title: 'Infraestructura',
+					title: 'Infrastructure & Production',
+					level: 'professional',
 					items: [
 						'Linux',
 						'Windows Server',
 						'IIS',
+						'Nginx',
 						'Reverse Proxy',
-						'SSL / HTTPS',
+						'SSL / TLS',
+						'SSH',
+						'Monitoring & Logs',
+						'Production Deployments',
+						'Linux User Administration',
 					],
 				},
 				{
-					title: 'Engineering',
+					title: 'Engineering & Practices',
+					level: 'professional',
 					items: [
 						'Git',
 						'GitHub',
-						'REST APIs',
-						'Monitoring',
 						'Technical Documentation',
+						'Incident Analysis',
+						'Production Support',
 					],
+				},
+				{
+					title: 'Containers & DevOps',
+					level: 'hands-on',
+					items: ['Docker', 'Docker Compose'],
+				},
+				{
+					title: 'Deployment Platforms',
+					level: 'hands-on',
+					items: ['Vercel', 'Netlify', 'Railway'],
 				},
 			],
 		},
@@ -170,7 +217,7 @@ export const translations = {
 			title: 'About',
 			subtitle: 'Cómo pienso como ingeniero',
 			description:
-				'Me gusta entender cómo funcionan realmente las cosas, no solo lograr que funcionen. Me muevo con comodidad entre escribir código, trabajar con datos y ocuparme del entorno donde vive una aplicación, y me importa construir cosas que sigan siendo mantenibles con el tiempo. Soy analítico, en buena parte autodidacta, y me motiva entender por qué algo se comporta como se comporta.',
+				'Me gusta entender cómo funcionan realmente las cosas, no solo lograr que funcionen. Me muevo con comodidad entre escribir código, trabajar con datos y ocuparme del entorno donde vive una aplicación, y me importa construir cosas que sigan siendo mantenibles con el tiempo. Soy analítico, en buena parte autodidacta, y me motiva entender por qué algo se comporta como se comporta. Uso herramientas de IA como apoyo para investigar, depurar y documentar más rápido, pero soy yo quien entiende el problema, evalúa las propuestas y valida cada resultado.',
 			stats: [
 				'Años de experiencia',
 				'Dominios principales',
@@ -327,12 +374,12 @@ export const translations = {
 				{
 					name: 'Data & SQL Server',
 					description:
-						'Working with relational data in real systems: writing and improving queries and stored procedures, and keeping data consistent.',
+						'Working with relational data in real systems: writing and optimizing queries and stored procedures, diagnosing performance, and managing access with scoped permissions.',
 				},
 				{
 					name: 'Infrastructure & Production',
 					description:
-						'Getting applications online and keeping them there — servers, web hosting, certificates and deployments.',
+						'Getting applications online and keeping them there — Windows and Linux servers, IIS and Nginx, certificates, deployments, and Linux user administration.',
 				},
 				{
 					name: 'Systems & Troubleshooting',
@@ -371,12 +418,13 @@ export const translations = {
 					summary:
 						'I own institutional web applications end to end — from development to deployment and ongoing support.',
 					responsibilities: [
-						'Build and maintain institutional web applications used in day-to-day operations.',
-						'Design and integrate REST APIs and backend services.',
-						'Work directly with SQL Server — queries, stored procedures and data integrity.',
-						'Deploy applications and keep them running on Windows and Linux servers.',
-						'Diagnose and resolve production issues across the application, data and infrastructure layers.',
-						'Document systems and maintain ownership of applications from code to deployment.',
+						'Build and maintain institutional web applications end to end — frontend, backend and REST APIs.',
+						'Work directly with SQL Server: queries, stored procedures, optimization and performance diagnosis.',
+						'Back up and restore data between production and development, and validate data integrity.',
+						'Create SQL Server logins and users with permissions scoped to specific applications and operational needs.',
+						'Create Linux users and configure administrative (sudo) privileges through scripted procedures.',
+						'Deploy and operate on Windows and Linux servers: IIS, reverse proxy, HTTPS and SSL certificates.',
+						'Monitor systems, analyze logs, handle production incidents and write technical documentation.',
 					],
 				},
 			],
@@ -410,41 +458,87 @@ export const translations = {
 		techStack: {
 			title: 'Technical Stack',
 			subtitle: 'Tools grouped by domain',
+			legendTitle: 'How to read this section',
+			legend: [
+				{
+					level: 'professional',
+					label: 'Professional',
+					description: 'Used as part of my professional work.',
+				},
+				{
+					level: 'hands-on',
+					label: 'Hands-on',
+					description:
+						'Used in projects, labs and development environments.',
+				},
+			],
 			groups: [
 				{
-					title: 'Software',
+					title: 'Software Engineering',
+					level: 'professional',
 					items: [
-						'Next.js',
 						'React',
+						'Next.js',
+						'JavaScript',
+						'TypeScript',
 						'Node.js',
 						'Express',
-						'JavaScript',
+						'REST APIs',
 						'Python',
+						'Odoo',
 					],
 				},
 				{
-					title: 'Data',
-					items: ['Microsoft SQL Server', 'SQL', 'Stored Procedures'],
+					title: 'Data & SQL Server',
+					level: 'professional',
+					items: [
+						'Microsoft SQL Server',
+						'T-SQL',
+						'Stored Procedures',
+						'Query Optimization',
+						'Performance Analysis',
+						'Backup / Restore',
+						'Data Validation',
+						'Users & Permissions',
+						'PostgreSQL',
+					],
 				},
 				{
-					title: 'Infrastructure',
+					title: 'Infrastructure & Production',
+					level: 'professional',
 					items: [
 						'Linux',
 						'Windows Server',
 						'IIS',
+						'Nginx',
 						'Reverse Proxy',
-						'SSL / HTTPS',
+						'SSL / TLS',
+						'SSH',
+						'Monitoring & Logs',
+						'Production Deployments',
+						'Linux User Administration',
 					],
 				},
 				{
-					title: 'Engineering',
+					title: 'Engineering & Practices',
+					level: 'professional',
 					items: [
 						'Git',
 						'GitHub',
-						'REST APIs',
-						'Monitoring',
 						'Technical Documentation',
+						'Incident Analysis',
+						'Production Support',
 					],
+				},
+				{
+					title: 'Containers & DevOps',
+					level: 'hands-on',
+					items: ['Docker', 'Docker Compose'],
+				},
+				{
+					title: 'Deployment Platforms',
+					level: 'hands-on',
+					items: ['Vercel', 'Netlify', 'Railway'],
 				},
 			],
 		},
@@ -462,7 +556,7 @@ export const translations = {
 			title: 'About',
 			subtitle: 'How I think as an engineer',
 			description:
-				"I like understanding how things actually work, not just getting them to run. I move comfortably between writing code, working with data, and dealing with the environment where an application lives — and I care about building things that stay maintainable over time. I'm analytical, largely self-taught, and driven by figuring out why something behaves the way it does.",
+				"I like understanding how things actually work, not just getting them to run. I move comfortably between writing code, working with data, and dealing with the environment where an application lives — and I care about building things that stay maintainable over time. I'm analytical, largely self-taught, and driven by figuring out why something behaves the way it does. I use AI tools to research, debug, and document faster — but I'm the one who understands the problem, evaluates the options, and validates every result.",
 			stats: [
 				'Years of Experience',
 				'Core Domains',
